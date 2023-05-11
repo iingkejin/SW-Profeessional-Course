@@ -1,0 +1,36 @@
+div {
+  /* border : 테두리를 넣어주는 속성 / 두께(px), 선 종류, 색상*/
+  /* top, bottom, left, right를 명시하지 않을 경우 상하좌우에 다 들어간다 */
+  /* border: 1px solid yellow; */
+  /* border-top: 1px solid black;
+  border-bottom: 1px solid red;
+  border-left: 2px solid blue;
+  border-right: 2px solid green; */
+}
+
+/* CSS에서 class명으로 스타일을 적용할 때는 
+꼭 클래스명 앞에 dot(.)을 붙여준다*/
+.txt-red {
+  color: red;
+  border: 1px solid blue;
+}
+
+.first-p {
+  border: 2px solid palegreen;
+  border-radius: 10px;
+  background-color: tomato;
+  color: steelblue;
+}
+
+.fruit-shop {
+  border: 3px solid brown;
+  background-color: #000;
+  color: #fff;
+}
+
+.nav-list {
+  width: 150px;
+  border: 2px solid yellowgreen;
+  border-radius: 20px;
+  background-color: navy;
+}

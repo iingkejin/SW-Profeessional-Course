@@ -1,0 +1,24 @@
+h1 {
+  color: rgb(86, 200, 204);
+}
+
+/* 폰트를 두껍게 하려면 700 또는 bold */
+.b-weight {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.delete {
+  text-decoration: line-through;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.back {
+  background-color: yellowgreen;
+}

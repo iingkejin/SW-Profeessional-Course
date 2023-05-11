@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 문자 인코딩 -->
+    <meta charset="UTF-8">
+    <!-- 브라우저 호환성 지정 -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <!-- 반응형 웹이나 모바일 등 기기장치를 인식할 때 기준 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 검색 엔진의 결과에 표시되는 페이지에 대한 설명 -->
+    <meta name="description" content="이 페이지는 ~~~ 페이지다.">
+    <!-- 검색 엔진에 의해 검색되는 키워드 지정 -->
+    <meta name="keywords" content="HTML, CSS, Javascript, Frontend">
+    <!-- 이 문서를 작성한 사람에 대한 정보 -->
+    <meta name="author" content="YEJIN LEE">
+    <link rel="stylesheet" href="./meta.css">
+    <title>meta 태그 연습</title>
+  </head>
+  <body>
+    <!-- div : 상자처럼 구역을 나누는 태그 -->
+    <div>나는 구역을 나누는 태그 div야</div>
+    <div>그리고 나는 Block요소 태그야</div>
+
+    <p>나는 pragraph 문단</p>
+    <p>p태그도 <span class="txt-red">Block</span> 요소</p>
+
+    <span>나는 텍스트의 특정 부분에 스타일을 적용할 때 사용하는 span</span>
+    <span>나는 inline요소여서 Block요소의 안에 들어갈 수 있다.</span>
+
+    <span>
+      <div>나는 Block 요소여서 절대 inline인 span태그 안에 들어갈 수 없어</div>
+      <p>나도 Block 요소여서 inline요소 안에 절대 들어갈 수 없어</p>
+    </span>
+
+    <div class="first-p">
+      <p>문단1</p>
+      <p>문단2</p>
+      <p>문단3</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <!-- Ordered List -->
+    <!-- li*num -->
+    <!-- heading Tag : 페이지에서 제일 중요한 제목이나 로고 -->
+    <div class="fruit-shop">
+      <h1>과일가게</h1>
+      <h3>당도가 높고 맛있어요!</h3>
+      <ol>
+        <li>바나나</li>
+        <li>딸기</li>
+        <li>포도</li>
+        <li>복숭아</li>
+        <li>사과</li>
+      </ol>
+
+      <!-- Unordered List -->
+      <ul class="nav-list">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+img {
+  width: 200px;
+}
+
+.naver {
+  width: 200px;
+  border: 2px solid green;
+  /* margin : 박스 바깥 여백 */
+
+  /* 상하좌우  */
+  margin: 0 auto;
+  /* padding : 박스 안쪽 여백 */
+  /* 박스 안쪽 상,하,좌,우에 20px 여백이 생긴다. */
+  /* top, bottom, left, right */
+  /* 값을 두 개만 입력했을 경우 : (앞):상하 (뒤)좌우 */
+  /* 네가지 값을 다 입력했을 때 : 상 우 하 좌 (시계방향)*/
+  /* padding: 20px 200px 50px 100px; */
+  /* padding-top: 20px;
+
+  padding-right: 200px;
+  padding-bottom: 50px;
+  padding-left: 100px; */
+}
+
+.google {
+  width: 300px;
+  border: 2px solid red;
+}

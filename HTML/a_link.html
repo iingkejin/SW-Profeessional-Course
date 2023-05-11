@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="desription" content="이 페이지는 a태그를 연습하는 페이지">
+  <meta name="keywords" content="HTML, a태그, 링크">
+  <meta name="author" content="이예진">
+  <link rel="stylesheet" href="../CSS/a_link.css">
+  <title>a link 연습</title>
+</head>
+<body>
+  <h1>
+    <a href="./a_link2.html">두번째 페이지로 이동</a>
+  </h1>
+  <!-- a태그 href : 이동할 링크 경로를 작성한다. -->
+  <!-- target 속성을 따로 작성하지 않을 경우 : 디폴트 _self (현재 창) -->
+  <a href="https://www.naver.com/" target="_self">누르면 네이버로 이동</a>
+  <!-- target _blank : 새 창 열기 -->
+  <a href="https://www.google.com/" target="_blank">누르면 구글로 이동</a>
+  <p><a href="https://www.naver.com/">여기</a>를 눌렀을 때 네이버로 이동</p>
+
+  <!-- src : 이미지가 있는 경로 -->
+  <!-- alt : 이미지 대체 텍스트(이미지 설명하는 텍스트) -->
+  <!-- img 태그를 사용 할 때는 꼭 alt 속성 값을 입력 해야한다. -->
+  
+  <div class="naver">
+    <a href="https://www.naver.com/">
+      <img src="../images/naver.png" alt="네이버로고">
+    </a>
+  </div>
+
+  <div class="google">
+    <a href="https://google.com/">
+      <img src="../images/google.jpg" alt="구글 로고">
+    </a>
+  </div>
+
+  <div class="youtube">
+    <a href="https://youtube.com/">
+      <img src="../images/youtube.jpg" alt="유튜브 로고">
+    </a>
+  </div>
+
+  <div>
+    <!-- 다른 HTML 파일로 이동 -->
+    <a href="./entity.html">누르면 entity.html 페이지로 이동</a>
+    <p>
+      누르면 <a href="./entity.html">entity.html</a>페이지로 이동
+    </p>
+  </div>
+
+  <div>
+    <!-- 메일로 연동 : mailto: -->
+    <a href="mailto:ingkejin@gamil.com">
+      <img src="../images/email.png" alt="이메일 아이콘">
+    </a>
+    <p>이메일 보내기</p>
+  </div>
+
+  <div>
+    <!-- 전화로 연동 : tel:01056581631 -->
+    <a href="tel:01052260498">전화 걸기</a>
+    <img src="../images/phone.jpg" alt="전화 아이콘">
+  </div>
+
+  <div>
+    <!-- 이미지 다운받기 -->
+    <a href="../images/toystory.jpg" download>이미지 다운로드</a>
+    <a href="../images/toystory.jpg" download>
+      <img src="../images/toystory.jpg" alt="토이스토리 포스터">
+    </a>
+  </div>
+</body>
+</html>

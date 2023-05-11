@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 시멘틱 태그와 일반태그 차이</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- <b>와 <strong>의 차이점 -->
+  <div class="font-b">
+    <b>폰트를 두껍게</b>
+    <p>
+      &lt;b&gt;태그는 CSS처럼 단순하게 웹 브라우저에 표시되는 모양만 결정
+      <span class="b-weight">CSS에서 폰트 두께는 font-weight 속성으로 조절한다.</span>
+    </p>
+    <strong>폰트를 두껍게</strong>
+    <p>&lt;strong&gt;태그는 Semantic Tag로 HTML 문서 내에서 강조하고 싶은
+      내용에 사용한다.
+      <strong>둘 다 폰트가 두꺼워지지만 이건 내용 강조</strong>
+    </p>
+  </div>
+
+  <!-- <i>와 <em>의 차이점 -->
+  <div class="font-i">
+    <p>&lt;i&gt;태그는 CSS처럼 웹 사이트에 표시되는 모양만 결정(스타일링)
+      <i>이탤릭체</i>
+      <span class="italic">내용 강조없이 모양만 이탤릭체로 표현하고
+        싶을 때는 CSS font-style 속성을 사용한다.
+      </span>
+    </p>
+    <p>&lt;em&gt;태그는 Semantic Tag로 HTML에서 이탤릭체로
+      <em>내용을 강조</em>하고 싶을 때 사용한다.
+    </p>
+  </div>
+
+  <!-- <s>와 <del>의 차이점 -->
+  <div class="font-d">
+    <p>
+      &lt;s&gt;태그는 화면상에 표시되는 모양 <s>취소선</s>
+      <span class="delete">취소된 내용이라는 강조가 아닌
+        디자인적으로 중간에 가로선을 긋고 싶을 때
+        CSS text-decoration 속성을 사용한다.
+      </span>
+    </p>
+    <p>
+      &lt;del&gt;태그는 Semantic Tag로 문서 내에서 삭제된 내용이라는 걸
+      강조하고 싶을 때 사용한다.
+      <del>이건 Semantic Tag!</del>
+    </p>
+  </div>
+
+  <!-- <u>와 <ins>의 차이점 -->
+  <div class="font-u">
+    <p>
+      &lt;u&gt;태그는 웹 브라우저에 표시되는 모양만 결정 <u>언더라인</u>
+      <span class="underline">CSS text-decotation : underline</span>
+    </p>
+    <p>
+      &lt;ins&gt;태그는 Semantic Tag로 HTML 문서에 새로 삽입된 내용이라는 걸
+      강조하고 싶을 때 사용한다. 
+      <ins>새로 삽입된 내용을 강조하는 Semantic Tag!</ins>
+    </p>
+  </div>
+
+  <p>지금 배운 것들<mark><strong>절대 외우지 않으셔도 됩니다.</strong></mark>
+    반복해서 사용하다보면 금방 익숙 해집니다!
+  </p>
+  <p><span class="back">CSS background-color</span> 속성을 이용해서 
+    &lt;mark&gt;태그랑 동일한 효과 적용하기
+  </p>
+</body>
+</html>
