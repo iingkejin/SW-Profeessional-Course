@@ -1,0 +1,28 @@
+body {
+  background-color: #000;
+}
+
+.google {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.white-bgc {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+img {
+  width: 300px;
+}
+
+.txt-bold {
+  font-weight: bold;
+}
+
+.txt-under {
+  text-decoration: underline;
+}
