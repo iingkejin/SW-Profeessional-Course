@@ -12,7 +12,39 @@
 </head>
 <body>
   <div class="wrapper">
-    
+    <h1>박스 나란히 배치하기</h1>
+
+    <div class="left">
+      <div>
+        <h2>1. 왼쪽 정렬</h2>
+        <h3>1.1 float 이용</h3>
+        <p>
+          Block Box들한테 float : left를 주되,
+          float 속성을 적용한 부모 다음 요소에게
+          clear로 플로팅 된 요소들의 효과를 지워줘야한다.
+        </p>
+        <div class="left-float box">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+
+      <div class="clear">
+        <h3>1.2 inline-block 이용</h3>
+        <p>
+          박스 display를 inline-block으로 설정하고, 
+          가로 X 세로 값을 주면 inline처럼 나란히 배치된다.
+        </p>
+        <div class="left-inline box">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+        <!-- <span class="border inline">Inline</span>
+        <span class="border inline">Inline</span> -->
+      </div>
+    </div>
   </div>
 </body>
 </html>

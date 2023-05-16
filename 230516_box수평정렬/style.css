@@ -1,0 +1,32 @@
+.box div {
+  width: 100px;
+  height: 100px;
+  border: 5px solid red;
+}
+
+.left-float div {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.border {
+  width: 200px;
+  height: 200px;
+  border: 1px solid blue;
+}
+
+.inline {
+  /* block, inline-block, inline 
+    세 가지 차이점에 대해서 잘 정리 해두기!
+
+    1. blcok : 가로 100% 차지, width, height 지정 가능 (수직 정렬)
+    2. inline-block : inline처럼 본인이 가진 콘텐츠 크기 만큼만
+       가로 사이즈를 차지, width, height 지정 가능 (수평 정렬)
+    3. inline : 본인이 가진 콘텐츠 크기만큼만 가로 사이즈 차지,
+       width, height 지정 불가능 (수평 정렬)
+  */
+  display: inline-block;
+}
