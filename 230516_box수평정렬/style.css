@@ -30,3 +30,13 @@
   */
   display: inline-block;
 }
+
+.left-inline div {
+  display: inline-block;
+}
+
+.left-flex {
+  /* 기본값 : flex-start(왼쪽 정렬) */
+  display: flex;
+  /* justify-content: flex-start; */
+}
