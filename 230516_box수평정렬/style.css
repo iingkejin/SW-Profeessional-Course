@@ -40,3 +40,29 @@
   display: flex;
   /* justify-content: flex-start; */
 }
+
+.right-float div {
+  float: right;
+}
+
+.right-float div div {
+  float: left;
+}
+
+.right-inline {
+  text-align: right;
+}
+
+.right-inline div {
+  display: inline-block;
+  text-align: left;
+  /* text-align : 문단을 수평으로 정렬하는 속성 */
+  /* block요소 안에 있는 inline 요소를 정렬한다. */
+  /* text를 정렬할 때는 자기 자신에게 적용 가능 */
+  /* inline 요소라면 text뿐 아니라 이미지도 정렬 가능함! */
+}
+
+.right-flex {
+  display: flex;
+  justify-content: flex-end;
+}

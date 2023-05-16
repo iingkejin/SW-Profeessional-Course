@@ -58,6 +58,57 @@
         </div>
       </div>
     </div>
+
+    <div class="right">
+      <h2>2. 오른쪽 정렬</h2>
+
+      <div>
+        <h3>2.1 float 이용</h3>
+        <p>
+          <strong>
+            박스한테 다짜고짜 float : right 속성을 적용하면
+            박스 순서가 뒤집힌다.
+          </strong>
+          정렬할 박스들에게는 float : left를 주고,
+          그 박스를 감싸고 있는 부모 태그에게 float : right
+          속성을 준다. 플로팅 된 요소 뒤에 clear로
+          플로팅된 요소들의 효과를 지워줘야 한다.
+        </p>
+        <div class="right-float">
+          <div class="box">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clear">
+        <h3>2.2 inline-block 이용</h3>
+        <p>
+          박스들을 inline-block으로 나란히 배치시킨 후,
+          그 부모한테 text-align : right 속성을 준다.
+        </p>
+        <div class="right-inline box">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+
+      <div>
+        <h3>2.3 flex 이용</h3>
+        <p>
+          나란히 배치하고 싶은 아이템들의
+          부모 요소에게 display : flex 속성을 준다.
+        </p>
+        <div class="right-flex box">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
