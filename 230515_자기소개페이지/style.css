@@ -76,6 +76,7 @@ body {
 
 .gnb-item {
   margin-right: 30px;
+  font-weight: 700;
 }
 
 /* gnb-item이라는 클래스를 가진 애들 중에서
@@ -84,3 +85,29 @@ body {
 .gnb-item:last-child {
   margin-right: 0;
 }
+
+.my-name {
+  margin-top: 30px;
+  color: #fff;
+}
+
+/* info-section이라는 클래스 안에 있는 img 태그에게만
+   지정된 스타일 적용
+*/
+.info-section img {
+  width: 300px;
+  height: 300px;
+  margin-top: 30px;
+  border-radius: 50%;
+  /* 1. cover
+    : 내용이 비율을 유지하면서 정의된 가로 X 세로
+    사이즈를 가득 채울 때 까지 확대된다. 
+    2. contain
+    : 내용이 비율을 유지하면서 정의된 가로 X 세로
+    안에서 최대한으로 확대된다.
+  */
+  object-fit: cover;
+}
+
+
+
