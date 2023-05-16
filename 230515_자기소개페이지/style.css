@@ -109,5 +109,22 @@ body {
   object-fit: cover;
 }
 
+.contact-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
+.contact-list h3 {
+  margin-right: 40px;
+  color: #fff;
+}
 
+.contact-item {
+  padding-right: 20px;
+}
+
+.contact-item:last-child {
+  padding-right: 0;
+}
