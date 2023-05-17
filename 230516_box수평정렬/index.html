@@ -109,6 +109,49 @@
         </div>
       </div>
     </div>
+
+    <div class="center">
+      <div>
+        <h2>3. 가운데 정렬</h2>
+        <h3>3.1 float으로 가운데 정렬</h3>
+        <p>
+          박스들을 float : left로 나란히 배치한 후에
+          그 박스들의 부모에게 자식들의 가로길이 다 더해서
+          width값으로 주고, margin : 0 auto;를 준다.
+        </p>
+        <div class="center_float box">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+
+      <div class="clear">
+        <h3>3.2 inline-block 속성 가운데 정렬</h3>
+        <p>
+          박스들을 inline-block으로 나란히 배치한 후
+          그 부모에게 text-align : center;를 준다.
+        </p>
+        <div class="center-inline box">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+
+      <div>
+        <h3>3.3 flex로 가운데 정렬</h3>
+        <p>나란히 배치하고 싶은 아이템들의 부모 요소한테
+          display : flex; 속성을 준다. 
+          justify-content : center;
+        </p>
+        <div class="center-flex box">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

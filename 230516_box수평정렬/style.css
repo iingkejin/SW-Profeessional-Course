@@ -66,3 +66,32 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.center_float {
+  /* 1. 자식 div들의 가로값을 다 더한 값 => width */
+  width: 300px;
+  margin: 0 auto;
+}
+
+.center_float div {
+  /* width : 100px이 아니라 양 옆에 border : 5px씩
+    더해져서 박스 하나의 width : 110px
+  */
+  float: left;
+  /* 내가 지정한 박스 사이즈에 border까지 포함시킨 값 */
+  box-sizing: border-box;
+}
+
+.center-inline {
+  text-align: center;
+}
+
+.center-inline div {
+  display: inline-block;
+  text-align: left;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+}
