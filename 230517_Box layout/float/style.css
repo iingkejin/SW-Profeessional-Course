@@ -1,0 +1,36 @@
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  /* 텍스트 크기 정의하는 속성 */
+  font-size: 36px;
+}
+
+.header {
+  height: 100px;
+  background-color: aquamarine;
+}
+
+.left-box {
+  width: 200px;
+  height: 500px;
+  /* 이 박스를 붕 띄워서 왼쪽으로 정렬 */
+  float: left;
+  background-color: cornflowerblue;
+}
+
+.right-box {
+  width: 1000px;
+  height: 500px;
+  /* left-box 옆으로 붙으라는 의미에서 float : left를
+     사용해도 되고, 남은 공간 오른쪽으로 가라는 의미로
+     float : right를 사용해도 된다.
+  */
+  float: left;
+  background-color: coral;
+}
+
+.footer {
+  clear: both;
+  height: 200px;
+  background-color: lightgreen;
+}
