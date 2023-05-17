@@ -95,3 +95,29 @@
   display: flex;
   justify-content: center;
 }
+
+.flex {
+  display: flex;
+  /* 기본값이 flex-start */
+  /* 가로축 정렬하는 속성 */
+  justify-content: space-between;
+  /* 세로축 정렬하는 속성 */
+  align-items : center;
+
+  /* 박스가 떨어지는 방향 기본값 : row  */
+  /* 
+    flex-direction : row일 경우 
+    : 가로축이 주축 
+    수평정렬 - justify-content (주축)
+    수직정렬 - align-items
+  */
+  /* 
+    flex-direction : column일 경우
+    : 세로축이 주축
+    수평정렬 - align-items
+    수직정렬 - justify-content (주축)
+  */
+  flex-direction: column;
+  height: 700px;
+  border: 2px solid #000;
+}
