@@ -1,0 +1,39 @@
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 36px;
+}
+
+.layout {
+  display: flex;
+  /* 기본값이 nowrap : 폭이 넘쳐도 아래로 떨어지지 않는다.*/
+  flex-wrap: wrap;
+}
+
+.header {
+  /* 부모요소가 차지하고 있는 width값의 100% */
+  width: 100%;
+  height: 100px;
+  background-color: aquamarine;
+}
+
+.left-box {
+  width: 20%;
+  height: 500px;
+  order: 2;
+  background-color: cornflowerblue;
+}
+
+.right-box {
+  width: 80%;
+  height: 500px;
+  order: 1;
+  background-color: coral;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  order: 3;
+  background-color: lightgreen;
+}
