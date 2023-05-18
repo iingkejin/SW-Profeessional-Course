@@ -42,3 +42,51 @@ nav {
   color: #fff;
   font-weight: 700;
 }
+
+.background {
+  height: 600px;
+  /* repeat, position, size 세 가지 속성을 항상 함께 사용한다. */
+  background-image: url('../images/back.jpeg');
+  /* display 설정할 때 바둑판처럼 남은 공간에 이미지 반복 여부 설정 */
+  background-repeat: no-repeat;
+  /* 
+    배경이미지를 화면상에서 어디에 위치하게 할건지 설정 
+    top, bottom, left, right, center, x축 y축 픽셀로도 지정 가능!
+  */
+  background-position: center;
+  /* object-fit처럼 배경 이미지 사이즈 설정 */
+  /* 기본값 : auto / (원래 이미지 크기만큼) */
+  /* contain, cover, px(가로X세로), % */
+  background-size: cover;
+}
+
+.back-txt {
+  height: 600px;
+  display: flex;
+  /* direction : column / 주축 : 수직 정렬 */
+  justify-content: center;
+  /* 수평 정렬 */
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.back-title {
+  font-size: 36px;
+}
+
+.back-content {
+  width: 80%;
+  margin-top: 30px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.back-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  /* button 태그는 기본적으로 border 속성을 가진다. */
+  border: none;
+  font-weight: 700;
+}
