@@ -1,0 +1,5 @@
+.table-border {
+  /* separate(기본값) : border가 분리 */
+  /* collapse : border를 한 줄로 합치기 */
+  border-collapse: collapse;
+}
