@@ -90,3 +90,23 @@ nav {
   border: none;
   font-weight: 700;
 }
+
+.first-box {
+  margin-top: -70px;
+}
+
+/* .first-box div : .first-box 라는 클래스 안에 있는 모든 div 태그 */
+/* .first-box > div : 좌측 클래스 안에 있는 div중 바로 자식 div 태그 */
+.first-box > div {
+  width: 500px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  border-radius: 20px;
+}
+
+.first-box p {
+  margin-top: 20px;
+}
