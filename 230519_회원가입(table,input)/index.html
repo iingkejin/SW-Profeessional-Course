@@ -9,6 +9,7 @@
   <meta name="author" content="yejin lee">
   <title>회원가입 페이지</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -87,6 +88,110 @@
             <input required id="email" type="email" name="userEmail">
           </td>
         </tr>
+        <tr>
+          <td>
+            <label for="nation">국적</label>
+          </td>
+          <td>
+            <!-- 
+              name 속성은 폼이 제출된 후
+              폼에서 데이터를 참조하기 위해서 사용한다. 
+            -->
+            <select name="nation" id="nation">
+              <!-- option 태그를 그룹화 -->
+              <optgroup label="Asia">
+                <!-- 
+                  option의 value 속성은 해당 옵션이 
+                  선택 됐을 때 서버로 제출되는 값을 명시한다.
+                -->
+                <!-- 태그 사이의 텍스트는 브라우저에 표시될 내용이고,
+                     value안 값이 서보로 제출되는 값
+                -->
+                <!-- value 속성이 입력되지 않았을 경우,
+                     option 태그 사이에 있는 텍스트가 서버로 전송된다.
+                -->
+                <!-- selected : 초기에 미리 선택되어 있는 항목 설정 -->
+                <!-- disabled : 요소를 비활성화 -->
+                <option value="kor">대한민국</option>
+                <option value="pdk" disabled>북한</option>
+                <option value="jap">일본</option>
+                <option value="chi">중국</option>
+                <option value="vie">베트남</option>
+              </optgroup>
+              <optgroup label="Europe">
+                <option value="ger">독일</option>
+                <option value="fra">프랑스</option>
+                <option value="eng">영국</option>
+                <option value="ita">이탈리아</option>
+                <option value="spa">스페인</option>
+              </optgroup>
+              <optgroup label="America">
+                <option value="usa">미국</option>
+                <option value="can">캐나다</option>
+                <option value="mex">맥시코</option>
+                <option value="bra">브라질</option>
+                <option value="arh">아르헨티나</option>
+              </optgroup>
+              <optgroup label="Africa"></optgroup>
+              <optgroup label="Oceania/Pacific"></optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>생년월일</label>
+          </td>
+          <td>
+            <span><select name="year" id="year"></select> 년</span>
+            <span><select name="month" id="month"></select> 월</span>
+            <span><select name="day" id="day"></select> 일</span>
+          </td>
+          <!-- 
+            jQuery는 웹사이트에서 자바스크립트를 쉽고 간단하게
+            사용할 수 있도록 도와주는 오픈소스 자바스크립트 라이브러리
+          -->
+          <!-- 
+            프레임워크 / 라이브러리 차이점 
+            : 프로그램의 흐름에 대한 제어 권한 
+          -->
+          <!-- 자바스크립트 프레임워크 : Angular, Vue(1) -->
+          <!-- 
+            프레임워크는 만든 사람이 짜놓은 틀 안에서
+            수동적으로 동작하기 때문에 제어 흐름이 프레임워크에게 있다.
+          -->
+          <!-- 자바스크립트 라이브러리 : React -->
+          <!-- 
+            라이브러리는 사용하는 개발자에게 제어 흐름이
+            있어서 개발자가 능동적으로 사용할 수 있다.
+          -->
+          <script>
+            // var, let, const
+            // Javascript의 변수명은 낙타표기법으로 작성한다.
+            // 프로그래밍에서 = '같다'라는 의미가 아니라
+            // 오른쪽 값을 왼쪽 변수에 대입 하겠다는 의미를 가진다.
+            // new Date() => 한국 표준시
+            let nowYear = new Date(); // 한국 표준시
+            nowYear = nowYear.getFullYear(); // 2023 년도
+            console.log(nowYear)
+
+            // Javascipt에서 반복적인 코드를 작성할 때 '반복문'을 사용한다.
+            // 반복문 for(원하는 조건)
+            // i = 1900에서 시작 그 i라는 숫자가 nowYear(2023)보다 작거나 같아질 때 까지 i라는 숫자를 1씩 증가시켜라
+            for( i = 1900; i <= nowYear; i++) {
+              // $ : jQuery 선택자
+              // document.getElementById("year")
+              $("#year").append("<option>" + i + "</option")
+            }
+
+            for( i = 1; i <= 12; i++ ) {
+              $("#month").append("<option>" + i + "</option>")
+            }
+
+            for( i = 1; i <= 31; i++ ) {
+              $("#day").append("<option>" + i + "</option>")
+            }
+          </script>
+        </tr> 
       </table>
     </form>
   </div>
