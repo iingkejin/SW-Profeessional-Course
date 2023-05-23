@@ -25,6 +25,44 @@
 <body>
   <div class="wrapper">
     <h1>CSS Position 연습</h1>
+    <!-- Position : HTML 문서상에서 요소가 배치되는 방식을 결정한다. -->
+    <!-- top, bottom, left, right를 이용해서 원하는 위치로 좌표 이동 가능(2,3,4) -->
+    <!-- 1. static -->
+    <!-- 
+      - 'static' : 고정적인 / css-position에서는 '원래 위치'를 뜻한다.
+      문서의 흐름에 맞춰서 그대로 배치된다.
+      - 별도로 지정하지 않으면 기본값이 static 상태
+      - static에서는 top, bottom, left, right 좌표를 넣어도 적용이 되지 않는다.
+     -->
+    <!-- 2. relative -->
+    <!-- 
+      - 내 원래 위치를 기준으로 좌표대로 이동한다.
+     -->
+    <!-- 3. absolute -->
+    <!-- 
+      - position중에 relative를 기준으로 이동한다.
+      - position중 가장 주의해서 사용해야 하는 속성
+      - relative(상대적인) <-> absolute(절대적인)
+      - absolute는 기준을 자신이 아닌 상위요소에서 찾는다.
+        상위에 기준이 되는 position : relative 필요함.
+        상위에 기준이되는 relative 속성이 없다면,
+        DOM 트리 최상위에 있는 <body>태그가 배치 기준이 된다.
+     -->
+    <!-- 4. fixed -->
+    <!-- 
+      - viewport라는 부르는 브라우저 화면을 기준으로 좌표 이동
+      - 화면을 스크롤 하더라도 특정 좌표에 고정되어서 움직이지 않는다.
+      - 
+    -->
+    <!-- 5. sticky -->
+    <!-- 
+      - 끈적거리는, 달라붙는 / 스클롤링 할 때 효과가 나타난다.
+     -->
+    <div class="position">
+      <div class="box1">position:relative</div>
+      <div class="box2">position:fixed</div>
+      <div class="box3">position:sticky</div>
+    </div>
   </div>
 </body>
 </html>
