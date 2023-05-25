@@ -121,3 +121,35 @@ header nav {
   background-position: center bottom;
   background-attachment: fixed;
 }
+
+footer {
+  padding: 20px 0;
+  background-color: skyblue;
+}
+
+.global-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.global-footer h3 {
+  color: #fff;
+}
+
+.icon-list {
+  display: flex;
+}
+
+.icon-item a {
+  padding-right: 20px;
+}
+
+.icon-item:last-child a {
+  padding-right: 0;
+}
+
+.icon-item i {
+  font-size: 24px;
+}
