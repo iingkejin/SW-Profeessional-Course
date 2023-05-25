@@ -76,3 +76,26 @@ header nav {
   border: none;
   border-radius: 5px;
 }
+
+.post-card {
+  position: relative;
+  top: -50px;
+}
+
+.post-card > div {
+  width: 80%;
+  /* 최대폭을 결정하는 속성 : 600px 이상은 커지지 말아라 */
+  max-width: 600px;
+  /* 최소폭을 결정하는 속성 : 300px 이하로는 작아지지 말아라 */
+  min-width: 300px;
+  /* 양 옆 = auto / top : 30px / bottom : 0 */
+  margin: 30px auto 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(217, 241, 254);
+}
+
+.post-card > div:first-child {
+  margin-top: 0;
+}
