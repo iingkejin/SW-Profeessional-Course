@@ -164,3 +164,23 @@ footer {
   font-size: 38px;
   color: rgb(41, 127, 161);
 }
+
+.side-menu {
+  position: fixed;
+  top: 150px;
+  right: 50px;
+}
+
+.side-menu-list {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888;
+  text-align: center;
+}
+
+.side-menu-item a {
+  display: inline-block;
+  padding: 10px 0;
+  color: #888;
+}
