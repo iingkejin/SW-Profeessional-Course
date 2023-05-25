@@ -99,3 +99,25 @@ header nav {
 .post-card > div:first-child {
   margin-top: 0;
 }
+
+.fixed-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-color: rgb(217, 241, 254);
+}
+
+.fixed-back-img {
+  width: 1000px;
+  height: 500px;
+  background-color: #fff;
+  background-image: url('../images/스누피2.png');
+  background-repeat: no-repeat;
+  background-size: 500px;
+  /* px, %, top, bottom, left, right */
+  /* px, % 사용 시 왼쪽 상단을 기준으로 거리 기재 */
+  /* x, y (가로 X 세로) 모두 center일 때는 center 한 번만 써도 된다. */
+  background-position: center bottom;
+  background-attachment: fixed;
+}
