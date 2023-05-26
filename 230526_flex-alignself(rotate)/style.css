@@ -43,6 +43,10 @@ body {
   background-color: red;
 }
 
+.red:hover ~ .green {
+  transform: scale(1.2) rotate(-45deg);
+}
+
 .yellow {
   align-self: center;
   background-color: yellow;
