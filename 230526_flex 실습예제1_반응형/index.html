@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="flex를 이용해서 레이아웃 잡기 연습">
+  <meta name="keywords" content="display, css, flex">
+  <meta name="author" content="yejin">
+  <title>Flex 실습예제1</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- header 태그 안에는 반드시 hn 태그가 하나 이상 포함 되어야 한다. -->
+    <header>
+      <nav>
+        <h1 class="logo">
+          <a href="./index.html">
+            <img src="./images/applelogo.png" alt="logo">
+          </a>
+        </h1>
+
+        <ul class="gnb-list">
+          <li class="gnb-item"><a href="./menu1.html">menu1</a></li>
+          <li class="gnb-item"><a href="./menu2.html">menu2</a></li>
+          <li class="gnb-item"><a href="./menu3.html">menu3</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 
+      <main>태그 안에는 페이지 내 주 콘텐츠 내용이 들어간다
+      문서 내에서 <main> 태그는 한 번만 사용한다.  
+    -->
+    <main>
+      <!-- main 태그 안에서 영역별로 section태그로 구분 해주는 게 좋다-->
+      <section class="background">
+        <div class="back-txt">
+          <h2 class="back-title">Lorem ipsum dolor sit amet.</h2>
+          <p class="back-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quaerat inventore accusantium totam quibusdam, cupiditate quos esse? Debitis totam reprehenderit eveniet obcaecati commodi fuga? Rerum repudiandae voluptate dignissimos ut error.</p>
+          <button class="back-btn" onclick="alert('안녕하세요~~')">버튼</button>
+        </div>
+      </section>
+
+      <section class="first-box">
+        <div>
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita laboriosam sapiente eum dolorem ea exercitationem.</p>
+        </div>
+      </section>
+
+      <section class="post-box-list">
+        <div class="post-box-item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolores dignissimos eum aspernatur accusantium neque.</p>
+        </div>
+
+        <div class="post-box-item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolores dignissimos eum aspernatur accusantium neque.</p>
+        </div>
+
+        <div class="post-box-item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolores dignissimos eum aspernatur accusantium neque.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="global-footer">
+        <h3>Contact</h3>
+        <ul class="footer-list">
+          <li class="footer-item"><a href="mailto:ingkejin@gmail.com">메일</a></li>
+          <li class="footer-item"><a href="tel:010-1234-5678">전화</a></li>
+          <li class="footer-item"><a href="https://www.youtube.com/">유튜브</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
