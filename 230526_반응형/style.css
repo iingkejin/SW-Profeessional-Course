@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+header, footer {
+  color: #fff;
+  background-color: darkblue;
+  padding: 30px 0;
+}
+
+.back-img {
+  height: 600px;
+  background-image: url('./images/눈.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.box-list {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.box-list div {
+  width: 30%;
+  height: 300px;
+  border: 1px solid darkblue;
+}
