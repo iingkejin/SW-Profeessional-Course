@@ -53,3 +53,30 @@ header, footer {
     background-position: center top;
   }
 }
+
+@media screen and (max-width : 768px) {
+  header, footer {
+    background-color: darkblue;
+    padding: 15px 0;
+  }
+
+  .back-img {
+    background-image: url('./images/back.jpg');
+  }
+
+  .box-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .box-list div {
+    width: 90%;
+    height: 150px;
+    margin-top: 20px;
+    border: 1px solid red;
+  }
+
+  .box-list div:first-child {
+    margin-top: 0;
+  }
+}
