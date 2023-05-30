@@ -191,3 +191,45 @@ footer {
 .footer-item a {
   color: #fff;
 }
+
+@media screen and (max-width : 1200px) {
+  .background {
+    height: 400px;
+  }
+  
+  .back-txt {
+    height: 400px;
+  }
+
+  .back-title {
+    font-size: 28px;
+  }
+  
+  .back-content {
+    font-size: 18px;
+  }
+  
+  .first-box {
+    margin-top: -40px;
+  }
+  
+  .post-box-list {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .post-box-item {
+    width: 80%;
+    margin-right: 0;
+    margin-top: 30px;
+  }
+  
+  .post-box-item:first-child {
+    margin-top: 0;
+  }
+  
+  footer {
+    margin-top: 80px;
+  }
+}
