@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 웹 접근성을 높이기 위해 사용 (스크린 리더기) */
+.visually-hidden {
+  display: none;
+}
+
+header {
+  height: 80px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position : fixed를 주면 width값이 본인이 가진 콘텐츠 만큼 줄어든다. */
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 80px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background-color: skyblue;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.gnb-list {
+  display: flex;
+}
+
+.gnb-item a {
+  padding: 20px;
+  transition: color 500ms;
+}
+
+.gnb-item a:hover {
+  color: dodgerblue;
+}
+
+/* 
+  nav에 호버 했을 때 gnb-item 이라는 클래스 안에 있는
+  a태그들한테 중괄호 안에 스타일을 적용 
+*/
+/* nav:hover .gnb-item a {
+  color: red;
+} */
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-image: url('../images/스누피배경.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 48px;
+}
+
+.main-content {
+  margin-top: 20px;
+}
+
+.main-btn {
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.post-card {
+  position: relative;
+  top: -50px;
+}
+
+.post-card > div {
+  width: 80%;
+  /* 최대폭을 결정하는 속성 : 600px 이상은 커지지 말아라 */
+  max-width: 600px;
+  /* 최소폭을 결정하는 속성 : 300px 이하로는 작아지지 말아라 */
+  min-width: 300px;
+  /* 양 옆 = auto / top : 30px / bottom : 0 */
+  margin: 30px auto 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(217, 241, 254);
+}
+
+.post-card > div:first-child {
+  margin-top: 0;
+}
+
+.fixed-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-color: rgb(217, 241, 254);
+}
+
+.fixed-back-img {
+  width: 1000px;
+  height: 500px;
+  background-color: #fff;
+  background-image: url('../images/스누피2.png');
+  background-repeat: no-repeat;
+  background-size: 500px;
+  /* px, %, top, bottom, left, right */
+  /* px, % 사용 시 왼쪽 상단을 기준으로 거리 기재 */
+  /* x, y (가로 X 세로) 모두 center일 때는 center 한 번만 써도 된다. */
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+
+footer {
+  padding: 20px 0;
+  background-color: skyblue;
+}
+
+.global-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.global-footer h3 {
+  color: #fff;
+}
+
+.icon-list {
+  display: flex;
+}
+
+.icon-item a {
+  padding-right: 20px;
+}
+
+.icon-item a i {
+  transition: all 0.5s;
+}
+
+.icon-item a:hover i {
+  color: dodgerblue;
+  transform: scale(1.2);
+}
+
+.icon-item:last-child a {
+  padding-right: 0;
+}
+
+.icon-item i {
+  font-size: 24px;
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.top-btn i {
+  font-size: 38px;
+  color: rgb(41, 127, 161);
+}
+
+.side-menu {
+  position: fixed;
+  top: 150px;
+  right: 50px;
+}
+
+.side-menu-list {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888;
+  text-align: center;
+}
+
+.side-menu-item a {
+  display: inline-block;
+  padding: 10px 0;
+  color: #888;
+  transition: all 500ms;
+}
+
+.side-menu-item a:hover {
+  color: dodgerblue;
+  text-decoration: underline;
+}
