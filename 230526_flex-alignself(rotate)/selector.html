@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 형제 선택자</title>
+</head>
+<style>
+  /* 부모 hover시 자식 요소는 선택자 없이 적용 가능 */
+  /* .parents:hover .second {
+    color: red;
+  } */
+
+  /* 부모 - 자식 관계가 아닌 형제일 경우에는 +,~ 선택자가 있어야 한다. */
+  .parents:hover ~.parents2 {
+    font-size: 36px;
+  }
+
+  /* css같은 경우에 아래 작성된 속성이 적용, 
+     태그 < class < id
+  */
+  /* +,~ : CSS 형제 선택자 
+     + (인접 형제 선택자): 선택된 요소 바로 다음에 오는 형제 요소 선택
+     ~ (형제 선택자) : 선택된 요소 다음에 오는 형제 요소들 선택
+  */
+  h1:hover ~ p {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+  }
+
+  .first:hover ~ .second {
+    text-decoration: underline;
+  }
+
+  .box-wrapper {
+    border: 5px solid darkblue;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .box1 {
+    background-color: blue;
+    /* 
+     transition 속성
+     1. property : 변화를 주고자 하는 CSS 속성 지정(복수 지정 가능) none, all, 특정 속성
+     2. duration : transtion을 적용할 시간 지정(s, ms) 1s = 1000ms
+     3. timing-function : transiton 패턴 지정 (ex 천천히 -> 빠르게 등)
+     - ease(기본값) : 천천히 시작 -> 빠르게 -> 천천히 끝
+     - linear : 처음부터 끝까지 일정한 속도로 진행
+     - ease-in : 천천히 시작 -> 빠르게 끝
+     - ease-out : 빠르게 시작 -> 천천히 끝
+     - ease-in-out : 천천히 시작 -> 천천히 끝
+    */
+    transition: transform 4s ease;
+  }
+
+  .box2 {
+    background-color: green;
+    transition: transform 4s linear;
+  }
+
+  .box3 {
+    background-color: red;
+    transition: transform 4s ease-in;
+  }
+
+  .box4 {
+    background-color: #000;
+    transition: transform 4s ease-out;
+  }
+
+  .box5 {
+    background-color: peru;
+    transition: transform 4s ease-in-out;
+  }
+
+  .title:hover ~ .box {
+    transform: translateX(500px);
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <div class="parents">
+      <h1>안녕</h1>
+      <p class="first">문단1</p>
+      <p class="second">문단2</p>
+      <p>문단333</p>
+    </div>
+    <p class="parents2">부모의 형제요소</p>
+
+    <div class="box-wrapper">
+      <h1 class="title">timing-fucntion 비교</h1>
+      <div class="box box1">ease</div>
+      <div class="box box2">linear</div>
+      <div class="box box3">ease-in</div>
+      <div class="box box4">ease-out</div>
+      <div class="box box5">ease-in-out</div>
+    </div>
+  </div>
+</body>
+</html>
