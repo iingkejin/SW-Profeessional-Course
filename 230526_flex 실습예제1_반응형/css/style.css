@@ -233,3 +233,51 @@ footer {
     margin-top: 80px;
   }
 }
+
+@media screen and (max-width : 768px) {
+  .logo img {
+    width: 30px;
+  }
+  
+  .gnb-list {
+    width: 220px;
+  }
+  
+  .background {
+    height: 300px;
+  }
+  
+  .back-txt {
+    height: 300px;
+  }
+  
+  .back-title {
+    font-size: 20px;
+  }
+  
+  .back-content {
+    font-size: 14px;
+  }
+  
+  .back-btn {
+    padding: 8px 16px;
+    border-radius: 10px;
+  }
+
+  .first-box {
+    margin-top: -20px;
+  }
+
+  .first-box > div {
+    width: 80%;
+  }
+  
+  .post-box-item {
+    padding: 60px 20px;
+    box-shadow: none;
+  }
+
+  footer {
+    margin-top: 60px;
+  }
+}
