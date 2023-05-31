@@ -92,26 +92,19 @@ header nav {
 }
 
 .post-card {
-  position: relative;
-  top: -50px;
+ display: flex;
+ justify-content: space-between;
+ width: 90%;
+ margin: 0 auto;
+ margin-top: 30px;
 }
 
 .post-card > div {
-  width: 80%;
-  /* 최대폭을 결정하는 속성 : 600px 이상은 커지지 말아라 */
-  max-width: 600px;
-  /* 최소폭을 결정하는 속성 : 300px 이하로는 작아지지 말아라 */
-  min-width: 300px;
-  /* 양 옆 = auto / top : 30px / bottom : 0 */
-  margin: 30px auto 0 auto;
+  width: 26%;
   padding: 30px;
   border-radius: 10px;
   text-align: center;
   background-color: rgb(217, 241, 254);
-}
-
-.post-card > div:first-child {
-  margin-top: 0;
 }
 
 .fixed-back {
@@ -119,21 +112,31 @@ header nav {
   justify-content: center;
   align-items: center;
   height: 600px;
+  margin-top: 30px;
   background-color: rgb(217, 241, 254);
 }
 
-.fixed-back-img {
-  width: 1000px;
+.bgc-box {
+  width: 500px;
   height: 500px;
   background-color: #fff;
-  background-image: url('../images/스누피2.png');
   background-repeat: no-repeat;
   background-size: 500px;
+  background-attachment: fixed;
+}
+
+.fixed-back-img {
+  background-image: url('../images/스누피2.png');
   /* px, %, top, bottom, left, right */
   /* px, % 사용 시 왼쪽 상단을 기준으로 거리 기재 */
   /* x, y (가로 X 세로) 모두 center일 때는 center 한 번만 써도 된다. */
-  background-position: center bottom;
-  background-attachment: fixed;
+  background-position: bottom left 200px;
+  margin-right: 20px;
+}
+
+.fixed-back-img2 {
+  background-image: url('../images/pngegg.png');
+  background-position: bottom right 200px;
 }
 
 footer {
@@ -212,4 +215,55 @@ footer {
 .side-menu-item a:hover {
   color: dodgerblue;
   text-decoration: underline;
+}
+
+@media screen and (max-width : 1200px) {
+  .background {
+    height: 400px;
+  }
+  
+  .main-title {
+    font-size: 44px;
+  }
+  
+  .post-card {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+   }
+   
+   .post-card > div {
+     width: 80%;
+     max-width: 600px;
+     margin: 30px auto;
+   }
+   
+   .post-card > div:first-child {
+     margin-top: 0;
+   }
+
+   .post-card > div:last-child {
+     margin-bottom: 0;
+   }
+
+   .fixed-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bgc-box {
+    width: 100%;
+    background-color: transparent;
+  }
+  
+  .fixed-back-img {
+    background-position: bottom center;
+    margin-right: 0;
+  }
+  
+  .fixed-back-img2 {
+    display: none;
+  }
 }
