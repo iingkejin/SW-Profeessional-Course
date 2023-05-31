@@ -1,0 +1,36 @@
+.img-box {
+  position: relative;
+  width: 70%;
+  margin: 30px auto;
+  background-color: dodgerblue;
+}
+
+.img-box img {
+  width: 50%;
+}
+
+.elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: move 1.5s linear infinite;
+  /* animation-name: move;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+  /* linear, ease, ease-in, ease-out, ease-in-out */
+}
+
+/* 0% 애니메이션의 시작 부분, 100% 애니메이션의 종료 부분 from-to */
+@keyframes move {
+  0% {
+    transform: translate(-15px, 0);
+  }
+  50% {
+    transform: translate(0px, -15px);
+  }
+  100% {
+    transform: translate(-15px, 0);
+  }
+}
