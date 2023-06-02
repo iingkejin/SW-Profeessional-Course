@@ -159,3 +159,38 @@ nav {
   object-fit: cover;
   border-radius: 50%;
 }
+
+footer {
+  padding: 20px 0;
+  background-color: rgb(235, 27, 27);
+}
+
+.global-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.global-footer a {
+  color: #fff;
+}
+
+.mac-link-list {
+  margin-right: 40px;
+}
+
+.mac-link-item:first-child a {
+  color: rgb(255, 213, 23);
+}
+
+/* flex-grow속성 : flex-grow가 적용되지 않았을 경우
+   레이아웃 보다 정렬된 아이템들의 width 합이 작으면
+   오른쪽에 여백이 남는다. 그 여백을 지정한 비율대로 
+   차지하게 할 수 있는 속성
+*/
+.mac-info-list { 
+  flex-grow: 1;
+}
+
