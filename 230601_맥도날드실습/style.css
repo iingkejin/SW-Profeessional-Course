@@ -134,3 +134,28 @@ nav {
   text-align: center;
   font-weight: 700;
 }
+
+.mac-story-box {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  margin-top: 30px;
+  padding : 20px 0;
+  text-align: center;
+  background-color: #fff;
+  border-top: 2px solid rgb(255, 213, 23);
+}
+
+.mac-story-list {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.mac-story-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
