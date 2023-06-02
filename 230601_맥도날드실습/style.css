@@ -1,3 +1,56 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+/* 부트스트랩에서 권장하는 그리드 시스템 
+  sm(Small), md(Medium) 768px, lg(Large) 1200px
+*/
+.sm-only {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px 0;
+  background-color: #fff;
+}
+
+.logo img {
+  width: 70px;
+}
+
+.gnb-list {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.gnb-item a {
+  font-size: 16px;
+  font-weight: 700;
+  transition: color 300ms ease-in-out;
+}
+
+.gnb-item a:hover {
+  color: red;
 }
