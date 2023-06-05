@@ -290,3 +290,65 @@ footer {
     height: 80px;
   }
 }
+
+@media screen and (max-width : 768px) {
+  .sm-only {
+    display: block;
+  }
+
+  .sm-hidden {
+    display: none;
+  }
+
+  .logo img {
+    width: 50px;
+  }
+
+  .gnb-icon-btn i {
+    font-size: 24px;
+  }
+
+  .background {
+    height: 300px;
+  }
+
+  .food-box {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .food-box-list {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  
+  .food-box-item {
+    width: 90%;
+    margin: 20px auto 0 auto;
+  }
+  
+  .food-box-item:last-child {
+    margin-right: 0;
+  }
+  
+  .food-box-item a {
+    transition: opacity 300ms ease-in-out;
+  }
+  
+  .food-box-item a:hover {
+    opacity: .7;
+  }
+  
+  .food-box-item img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .food-box-txt {
+    width: 90%;
+    margin: 30px auto;
+    text-align: center;
+    font-weight: 700;
+  }
+}
