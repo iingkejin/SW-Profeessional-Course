@@ -219,6 +219,7 @@ footer {
   transition : background-color 300ms ease-in-out;
 }
 
+
 .mac-icon-list li:hover {
   background-color: rgb(235, 27, 27);
 }
@@ -239,4 +240,53 @@ footer {
   font-size: 26px;
   color: rgb(235, 27, 27);
   transition: color 300ms ease-in-out;
+}
+
+@media screen and (max-width : 1200px) {
+  nav {
+    padding: 5px 0;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .gnb-list {
+    width: 250px;
+  }
+
+  .background {
+    height: 400px;
+  }
+
+  .food-box {
+    margin-top: 50px;
+  }
+
+  .food-box-item {
+    width: 33%;
+  }
+  
+  .food-box-item img {
+    width: 100%;
+    height: 150px;
+  }
+  
+  .food-box-txt {
+    margin: 20px auto;
+  }
+
+  .mac-story-box {
+    margin-top: 50px;
+    padding : 10px 0;
+  }
+  
+  .mac-story-list {
+    width: 40%;
+  }
+  
+  .mac-story-item img {
+    width: 80px;
+    height: 80px;
+  }
 }
