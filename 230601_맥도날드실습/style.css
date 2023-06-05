@@ -326,29 +326,90 @@ footer {
     width: 90%;
     margin: 20px auto 0 auto;
   }
+
+  .food-box-item:first-child {
+    margin-top: 0;
+  }
   
   .food-box-item:last-child {
-    margin-right: 0;
-  }
-  
-  .food-box-item a {
-    transition: opacity 300ms ease-in-out;
-  }
-  
-  .food-box-item a:hover {
-    opacity: .7;
-  }
-  
-  .food-box-item img {
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
+    margin-right: auto;
   }
   
   .food-box-txt {
-    width: 90%;
-    margin: 30px auto;
-    text-align: center;
-    font-weight: 700;
+    margin: 20px auto;
+  }
+
+  .mac-story-box {
+    margin-top: 30px;
+  }
+  
+  .mac-story-list {
+    width: 50%;
+  }
+  
+  .mac-story-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .global-footer {
+    flex-wrap: wrap;
+  }
+  
+  .mac-link-list {
+    margin-right: 0;
+  }
+  
+  .mac-info-list { 
+    text-align: right;
+  }
+  
+  .mac-icon-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .mac-icon-list li {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 200px;
+    height: 100vh;
+    padding: 32px 20px;
+    background-color: #fff;
+    transform: translateX(-200px);
+  }
+
+  .side-menu-item a {
+    display: block;
+    padding: 10px;
+    color: #3f4150;
+  }
+
+  .overlay {
+    position: fixed;
+    /* top,left,bottom,right 좌표를 다 0으로 줄 경우, 
+       네 꼭지점에서 서로 잡아당기기 때문에 쫙 펴져서
+       width : 100%, height: 100%와 동일한 효과를 줄 수 있다.
+    */
+    top: 0;
+    left: 0;
+    /* bottom: 0;
+    right: 0; */
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    /* display : none transition이 먹지 않는다. */
+    /* UI Animation 효과를 주고 싶다면 visibility를 사용! */
+    visibility: hidden;
+    background-color: rgba(63, 65, 80, 0.5);
   }
 }
