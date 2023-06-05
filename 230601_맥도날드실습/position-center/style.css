@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: relative;
+  /* position : absolute 상태에서는 flex 먹지 않는다. */
+  height: 100vh;
+  background-color: turquoise;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* translate(x, y) */
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
+}
