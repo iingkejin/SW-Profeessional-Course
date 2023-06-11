@@ -1,3 +1,406 @@
 * {
+  margin: 0;
+  padding: 0;
   font-family: 'Jua', sans-serif;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  border: none;
+  /* transparent : 투명한 */
+  background-color: transparent;
+}
+
+.sm-hidden,
+.lg-only,
+.md-only,
+.visually-hidden {
+  display: none;
+}
+
+.global-header {
+  background-color: rgb(255, 204, 0);
+  border-bottom: 1px solid #e0e2e7;
+}
+
+.gnb-wrapper {
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.logo {
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.gnb-icon-button {
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  color: #000;
+  border-radius: 50%;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+
+.gnb-icon-button.is-menu {
+  color: rgb(222, 0, 0);
+}
+
+.gnb-icon-button.is-menu:active {
+  color: rgb(188, 0, 0);
+}
+
+.gnb-icon-button:active {
+  color: #3f4150;
+}
+
+.lnb {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e2e7;
+}
+
+.lnb-list {
+  width: 95%;
+  margin: 0 auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.lnb-item a {
+  font-size: 13px;
+  padding: 0 8px;
+  font-weight: 700;
+}
+
+.lnb-item a:active {
+  color: rgb(222, 0, 0);
+}
+
+.background {
+  height: 300px;
+  background-image: url('./images/lego.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  padding: 30px 20px;
+  background-color: #fff;
+  z-index: 200;
+  overflow-y: auto;
+  transform: translateX(-240px);
+  transition: transform 300ms ease-in-out;
+}
+
+.sidebar.is-active {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  padding: 0 12px;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.sidebar-user a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #3f4150;
+  font-weight: 700;
+  width: 100%;
+}
+
+.user-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 8px;
+  /* 기본값은 1 / 값을 0으로 바꾸면 부모 컨데이너 크기와 상관없이 본인 크기를 유지한다. */
+  /* shrink : 줄어들다, 줄어들게하다 */
+  flex-shrink: 0;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.drawer-menu {
+  border-top: 1px solid #e0e2e7;
+}
+
+.drawer-menu.is-open.is-product .drawer-menu-content {
+  /* drawer-menu-item height * li 갯수 */
+  max-height: 288px;
+}
+
+.drawer-menu.is-open.is-brand .drawer-menu-content {
+  max-height: 216px;
+}
+
+.drawer-menu.is-open.is-info .drawer-menu-content {
+  max-height: 180px;
+}
+
+.drawer-menu.is-open .fa-chevron-down {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.drawer-menu-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #3f4150;
+  width: 100%;
+  height: 54px;
+  padding: 0 8px;
+  font-weight: 700;
+}
+
+.drawer-menu-button i:first-child {
+  margin-right: 8px;
+  font-size: 24px;
+  color: #3f4150;
+  font-size: 20px;
+}
+
+.drawer-menu-button i:last-child {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #3f4150;
+  transition: transform 200ms ease-in-out;
+}
+
+.drawer-menu-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms ease-in-out;
+}
+
+.drawer-menu-item a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #3f4150;
+  width: 100%;
+  height: 36px;
+  padding: 0 12px;
+  font-weight: 700;
+}
+
+.drawer-menu.is-active .drawer-menu-button i{
+  color: rgb(255, 204, 0);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(63, 65, 80, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease-in-out;
+  transition: visibility 300ms ease-in-out;
+}
+
+.overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 768px 이상 해당 스타일링 적용 */
+@media screen and (min-width: 768px) {
+
+  .sm-only,
+  .lg-only {
+    display: none;
+  }
+
+  .md-only,
+  .sm-hidden {
+    display: block;
+  }
+
+  .gnb-wrapper {
+    height: 60px;
+  }
+
+  .logo {
+    height: 60px;
+    position: static;
+    transform: none;
+    margin-right: 24px;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+  .gnb-wrapper {
+    height: 80px
+  }
+
+  .gnb-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .gnb-nav-list {
+    display: flex;
+  }
+
+  .gnb-nav-item a {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: color 300ms ease-in-out;
+  }
+
+  .gnb-nav-item:hover a {
+    color: rgb(222, 0, 0);
+  }
+
+  .gnb-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .button-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .gnb-icon-button {
+    margin-right: 30px;
+  }
+
+  .my-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .my-menu-list {
+    display: flex;
+  }
+
+  .my-menu-item {
+    padding: 5px;
+  }
+
+  .my-menu-item i {
+    font-size: 20px;
+    transition: color 200ms ease-in-out;
+  }
+
+  .my-menu-item i:active {
+    color: #3f4150;
+  }
+
+  .background {
+    height: 400px;
+  }
+}
+
+/* 1200px 이상 해당 스타일링 적용 */
+@media screen and (min-width: 1200px) {
+  .md-only,
+  .lg-hidden {
+    display: none;
+  }
+
+  .lg-only {
+    display: block;
+  }
+
+  .input-group {
+    position: relative;
+    margin-right: 20px;
+  }
+
+  .input-group i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 20px;
+    color: #8c8d96;
+  }
+
+  .form-input {
+    font-size: 16px;
+    display: block;
+    height: 40px;
+    padding: 0 0 0 40px;
+    background-color: #fff;
+    border: 1px solid #e0e2e7;
+    border-radius: 4px;
+    transition: background-color 200ms ease-in-out;
+  }
+
+  .form-input:not(:disabled):hover {
+    background-color: #f7f8fa;
+  }
+
+  .form-input:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+
+  .background {
+    height: 500px;
+  }
 }
