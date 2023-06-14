@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>가상 요소</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="한지호" />
+    <meta name="keywords" content="CSS, 가상 요소" />
+    <meta name="description" content="CSS의 가상 요소를 이용하여 반복적으로
+    나타나는 가상의 요소를 만들 수 있다." />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div id="box1">
+      Hello World! Hello World! Hello World!
+    </div>
+
+
+    <p class="apple">안녕하세요.</p>
+    <p class="apple">반갑습니다.</p>
+    <p class="apple">Hello world!</p>
+
+    <table id="bill">
+      <tr>
+        <th>품목</th>
+        <th>단가</th>
+      </tr>
+      <tr>
+        <td>공책</td>
+        <td>200,000</td>
+      </tr>
+      <tr>
+        <td>볼펜</td>
+        <td>150,000</td>
+      </tr>
+      <tr>
+        <td>만년필</td>
+        <td>250,000</td>
+      </tr>
+    </table>
+
+    <div id="modal">
+      <div id="modalwin">
+        <button id="modalcl" type="button"></button>
+        <p>asdfasd asdfasas adsf asdsd fas fasdfas</p>
+      </div>
+    </div>
+
+    <script>
+      // 목표 : X자 버튼을 눌렀을때 모달이 사라졌으면 좋겠다.
+      // 1. #modalcl 이 클릭 당했을 때
+      // 2. #modal 의 style 중 display라는 스타일의 값을
+      //    none 으로 바꾼다.
+      document.getElementById("modalcl").onclick = function(){
+        document.getElementById("modal").style.display = "none";
+      };
+
+      // $("#modalcl").click(function(){
+      //   $("#modal").hide();
+      // });
+
+      function dum(x){
+        var result = x+2;
+        alert(result);
+      }
+
+      dum(20);
+
+    </script>
+  </body>
+</html>

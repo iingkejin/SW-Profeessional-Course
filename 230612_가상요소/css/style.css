@@ -1,0 +1,118 @@
+#box1 {
+  width: 20%;
+  height: 1.5em;
+  background-color: yellow;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.apple::after {
+  content: "다람쥐";
+  color: red;
+}
+
+.apple::before {
+  content: "ㅎㅎㅎ";
+  display: block;
+  background-color: red;
+  width: 200px;
+  height: 50px;
+}
+
+#bill {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#bill td,
+#bill th {
+  border: 1px solid black;
+  padding: 0.3em 1em;
+}
+
+#bill th {
+  background-color: #eee;
+}
+
+/* 
+아이디가 bill인 녀석의
+자손 중에서 각각 둘째인 녀석들의 뒷부분
+ */
+#bill td:nth-of-type(2)::after {
+  content: "원";
+  margin-left: 0.3em;
+  font-size: 0.8em;
+  color: #555;
+}
+
+#modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+#modalwin {
+  background-color: white;
+  width: calc(100% - 20px);
+  max-width: 450px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 4px;
+  box-shadow: 3px 8px 12px rgba(0,0,0, 0.1);
+}
+
+#modalcl {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+#modalcl::before,
+#modalcl::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: all 0.4s;
+}
+#modalcl::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+#modalcl::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+/* 
+#modalcl에 마우스를 올렸을때
+그녀석의 before와 after
+*/
+#modalcl:hover::before {
+  transform: translate(-50%,-50%) rotate(0deg);
+  margin-top: -5px;
+  width: 20px;
+  height: 5px;
+}
+#modalcl:hover::after {
+  transform: translate(-50%,-50%) rotate(0deg);
+  margin-top: 5px;
+  width: 20px;
+  height: 5px;
+}
+
+
+
