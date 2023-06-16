@@ -8,3 +8,14 @@
   text-decoration: none;
   color: #444;
 }
+
+.caret-right {
+  display: inline-block;
+  width: 5px;
+  height: 12px;
+  border-left: 5px solid #888;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  box-sizing: border-box;
+  margin: 0 4px;
+}

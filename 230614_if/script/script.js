@@ -250,8 +250,8 @@ for(i=0; i<filename.length; i++){
 }
 
 if(depth1 != undefined && depth2 != undefined){
-  var bc_1 = "&gt; <a>"+ menuname1[depth1] +"</a>";
-  var bc_2 = "&gt; <a href='"+currentname+"'>"+ menuname2[depth1][depth2] +"</a>";
+  var bc_1 = "<span class='caret-right'></span> <a>"+ menuname1[depth1] +"</a>";
+  var bc_2 = "<span class='caret-right'></span> <a href='"+currentname+"'>"+ menuname2[depth1][depth2] +"</a>";
   document.getElementById("bc_1").innerHTML = bc_1;
   document.getElementById("bc_2").innerHTML = bc_2;
 }
