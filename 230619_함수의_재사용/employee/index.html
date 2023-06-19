@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>최저시급계산기</title>
+</head>
+<body>
+<style>
+  :root{
+    --gray: rgb(214, 53, 53);
+  }
+</style>
+  <div id="app" style="background:var(--gray)">
+    <!-- 시간 -->
+    <input 
+      id="time" 
+      type="number" 
+      value="0"
+      placeholder="몇시간을 근무하셨나요"
+    />
+    <!-- 최저시급 -->
+    <p id="salary">9620</p>
+    <!-- 하루에 벌어들인 시급 -->
+    <div id="result">결과</div>
+    <button id="action">계산</button>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
