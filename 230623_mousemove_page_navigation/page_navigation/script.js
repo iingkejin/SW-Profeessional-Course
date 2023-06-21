@@ -3,7 +3,7 @@ const nav = document.querySelector('.nav')
 // 자식요소들만 모아놓은 변수
 const pages = container.querySelectorAll('.page')
 const navItems = nav.querySelectorAll('.button')
-console.log(pages[3])
+// console.log(pages[3])
 
 // 버튼을 눌렀을때, 버튼과 같은 index값을 가진 page도
 // 동일하게 active 클래스를 갖는다.
@@ -31,12 +31,12 @@ navItems.forEach((item,index) => {
 //   console.log(item + index)
 // })
 
-function func (content , element) {
-  return console.log(content, element)  
-}
-func('con', 'ele')
+// function func (content , element) {
+//   return console.log(content, element)  
+// }
+// func('con', 'ele')
 
-const func2 = (content, element) => {
-  console.log(content, element)
-}
-func2('con2', 'ele2')
+// const func2 = (content, element) => {
+//   console.log(content, element)
+// }
+// func2('con2', 'ele2')
