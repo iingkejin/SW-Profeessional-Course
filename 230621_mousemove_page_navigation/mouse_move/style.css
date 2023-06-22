@@ -15,6 +15,7 @@ html,body{
   width: 100vw;
   height: 100vh;
   background-color: hsl(200,50%,30%);
+  position:relative;
 }
 #pointer{ 
   /* --size:36px; */
@@ -57,25 +58,36 @@ html,body{
   /* absolute일 경우 content 꼭 넣어주기 */
   content:'';
 }
+
 #app .bubble{
+  position: fixed;
+  top:0;
+  left:0;
   display: block;
   width:var(--size);
   height:var(--size);
   border-radius:var(--size);
   background-color: white;
-  /* opacity: 0; */
+  opacity: 0;
 }
+
 #app .bubble.active{
   opacity:1;
-  animation: bubble 1s ease-in-out forwards;
+  animation: bubble 300ms ease-in-out forwards;
 }
 @keyframes bubble {
+  /* 0 */
  0%{
   opacity:0;
   transform: scale(0);
  } 
- 100%{
+ /* 500ms */
+ 50%{
   opacity:1;
-  transform: scale(1.2);
+ }
+ /* 1000ms */
+ 100%{
+  opacity:0;
+  transform: scale(3);
  }
 }
