@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main id="app">
+    <div class="list-container">
+      <header id="header">
+        <h1>
+          <iconify-icon width="48" height="48" icon="fluent:list-bar-16-regular" style="color:red"></iconify-icon>
+          Todo List
+        </h1>
+        <div class="input-wrapper">
+          <input id="add-todo" type="text" placeholder="할 일을 입력해주세요">
+          <button id="add-button">추가</button>
+        </div>
+      </header>
+      <ul id="list">
+        <li class="list-item">
+          오늘 해야할 일
+          <button class="list-delete">&#x2716</button>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -8,11 +8,12 @@ let timerId;
 
 startBtn.addEventListener('click',() => {
   index = 0;
+  
   timerId = setInterval(()=>{
     index++
     number.textContent = index;
     // console.log(index)
-  },10)  
+  },10)
 })
 
 stopBtn.addEventListener('click',() => {
