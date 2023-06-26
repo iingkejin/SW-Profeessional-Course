@@ -12,8 +12,8 @@ listItem.forEach((item) => {
 
   item.addEventListener('click',() => {
     // item 하나만 active class를 가질 수 있다.
-
-    // item에 active 클래스를 추가 또는 삭제
-    item.classList.toggle('active')
+    listItem.forEach(elem => elem.classList.remove('active'))
+    
+    item.classList.add('active')
   })
 })
