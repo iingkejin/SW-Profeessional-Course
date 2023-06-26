@@ -1,18 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-#app {
-  padding: 1rem;
-}
-
 .list {
   list-style: none;
   display: flex;
@@ -32,6 +17,9 @@ html, body {
 .list__item.active .list__content {
   display: flex;
 }
+.list__item.active .list__button .icon {
+  transform: rotate(0deg);
+}
 .list__button {
   display: flex;
   border: 0;
@@ -40,10 +28,28 @@ html, body {
   cursor: pointer;
   justify-content: space-between;
 }
+.list__button .icon {
+  transform: rotate(180deg);
+}
 .list__button:active {
   background-color: hsl(220, 50%, 90%);
 }
 .list__content {
   display: none;
+  padding: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
   padding: 1rem;
 }/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,13 @@
+@import "list.scss";
+// BEM
+// block - block list
+// Element - item, button
+// Modifier - active, disable
+// list__item
+// list__item--active
+// button__icon--primary
+// button--alert
+// button--info
 *{
   padding:0;
   margin:0;
@@ -11,37 +21,4 @@ html,body{
 #app{
   padding: 1rem;
 }
-.list{
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  &__item{
-    display: flex;   
-    flex-direction: column; 
-    margin-bottom: 1rem;
-    box-shadow: 0 0 0 1px hsl(220,50%,80%);    
-    border-radius: 1rem;
-    overflow: hidden;
-    &.active{
-      box-shadow: 0 0 0 3px hsl(220,50%,50%);
-      .list__content{
-        display: flex;
-      }
-    }
-  }
-  &__button{
-    display:flex;
-    border:0;
-    padding:1rem;
-    background-color: white;
-    cursor:pointer;
-    justify-content: space-between;
-    &:active{
-      background-color: hsl(220,50%,90%);
-    }
-  }
-  &__content{
-    display: none;
-    padding:1rem;
-  }
-}
+

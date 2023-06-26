@@ -1,0 +1,40 @@
+.list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  &__item{
+    display: flex;   
+    flex-direction: column; 
+    margin-bottom: 1rem;
+    box-shadow: 0 0 0 1px hsl(220,50%,80%);    
+    border-radius: 1rem;
+    overflow: hidden;
+    &.active{
+      box-shadow: 0 0 0 3px hsl(220,50%,50%);
+      .list__content{
+        display: flex;
+      }
+      .list__button .icon{
+        transform: rotate(0deg);
+      }      
+    }
+  }
+  &__button{
+    display:flex;
+    border:0;
+    padding:1rem;
+    background-color: white;
+    cursor:pointer;
+    justify-content: space-between;
+    .icon{
+      transform: rotate(180deg);
+    }
+    &:active{
+      background-color: hsl(220,50%,90%);
+    }
+  }
+  &__content{
+    display: none;
+    padding:1rem;
+  }
+}
