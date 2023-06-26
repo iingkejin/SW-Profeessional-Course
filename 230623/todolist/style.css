@@ -112,7 +112,7 @@ html,body{
 #list .list-item .list-delete{
   position:absolute;
   top:0;
-right:0;  
+  right:0;  
   display: flex;
   width: 24px;
   height: 24px;
@@ -121,6 +121,5 @@ right:0;
   border: 0;
   align-items: center;
   justify-content: center;
-  border-radius: 36px;;
-  
+  border-radius: 36px;;  
 }
