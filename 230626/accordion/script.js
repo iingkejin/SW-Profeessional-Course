@@ -6,3 +6,14 @@ const listItem = list.querySelectorAll('.list__item')
 console.log(listItem)
 
 // listItem forEach - item 요소들을 console.log()
+listItem.forEach((item) => {
+  // listItem에서 요소들을 꺼내와 console.log()
+  console.log(item)
+
+  item.addEventListener('click',() => {
+    // item 하나만 active class를 가질 수 있다.
+
+    // item에 active 클래스를 추가 또는 삭제
+    item.classList.toggle('active')
+  })
+})
