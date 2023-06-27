@@ -16,17 +16,18 @@ html,body{
 }
 .snow{
   position: fixed;
-  top:0;
+  top:-10px;
   left:0;
   display:flex;
   width: 3px;
   height:3px;
   background-color: white;
   border-radius:3px;
+  animation: snowfall 3s infinite forwards linear;
 }
 @keyframes snowfall {
   0%{
-    top:0;
+    top:-10px;
   }
   100%{
     top:100%;
