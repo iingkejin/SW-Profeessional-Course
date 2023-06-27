@@ -15,6 +15,9 @@ html,body{
   border-radius:48px;
   position: relative;
 }
+.toggle-container.active{
+  background-color: rgb(24, 208, 205);
+}
 .toggle-container label{
   display: block;
   text-indent: -9999px;  
@@ -40,6 +43,8 @@ html,body{
   background-color:white;
   border-radius: 48px;
   z-index: 0;
+   /* transition */
+
 }
 
 input#toggle:checked + .switch{
