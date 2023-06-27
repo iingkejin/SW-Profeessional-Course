@@ -23,7 +23,13 @@ html,body{
   height:3px;
   background-color: white;
   border-radius:3px;
-  animation: snowfall 3s infinite forwards linear;
+  /* animation: snowfall 3s infinite forwards linear; */
+  animation-name : snowfall;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  /* animation-delay */
 }
 @keyframes snowfall {
   0%{
