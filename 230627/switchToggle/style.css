@@ -44,7 +44,7 @@ html,body{
   border-radius: 48px;
   z-index: 0;
    /* transition */
-
+  transition: all 200ms ease-in-out;
 }
 
 input#toggle:checked + .switch{
