@@ -22,10 +22,10 @@ html,body{
   width: 100%;
   height: 48px;
   border-radius:48px;
-  background-color: red;
   position: absolute;
   top:0;
   left:0;
+  z-index:1;
 }
 .toggle-container input#toggle{
   display:none;
@@ -39,4 +39,9 @@ html,body{
   display: block;
   background-color:white;
   border-radius: 48px;
+  z-index: 0;
+}
+
+input#toggle:checked + .switch{
+  left: 54px;
 }
