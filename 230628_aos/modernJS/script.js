@@ -66,13 +66,17 @@ class Trainer extends Pokemon{
   showTrainerName () {
     console.log(this.name)
   }
+  another(){
+    // 내부 메소드를 끌어다 쓰는 방법
+    this.showTrainerName()  
+  }
 }
 
-const trainer = new Trainer('웅이')
+const trainer = new Trainer()
 // trainer.name = '피카츄'
-trainer.showTrainerName()
-trainer.showPokemonName()
-
+trainer.showTrainerName() // 지우
+trainer.showPokemonName() // 피카츄
+trainer.another()
 /**
  * 스프레드 연산자
  * 배열에서도 쓸 수있고, 
@@ -123,7 +127,9 @@ console.log(num)
 
 const filterNumber = (...args) => {
   return args.filter(number => {
-    if(number === 1){
+    // 조건을 두가지 걸러낼때
+    // OR
+    if(number === 1 || number === 3 ){
       return number
     }    
   })
@@ -153,3 +159,58 @@ const filterPokemon = (...args) => {
 }
 
 console.log(filterPokemon(...pokemons))
+
+// let res = 1 + '2'
+// console.log(res) // '12'
+// console.log(typeof res)
+
+/**
+ * 구조분해 - Destructuring
+ * structure = 구조
+ * de-분해
+ */
+
+const [a, b] = [1, 2]
+console.log(a)
+console.log(b)
+
+// const pokemons = ['피카츄', '고라파덕', '이상해씨']
+// c,d,e 변수 3개에 구조분해해서 담아주세요
+// console.log(c,d,e) 결과 출력
+const [c,d,e] = pokemons
+console.log(c,d,e)
+// const newMons = [...pokemons, '파이리']
+// console.log(newMons) // [['피카츄', '고라파덕', '이상해씨'],'파이리']
+// console.log(newMons.length)
+
+// 공백으로 처리한 부분은 skip(건너뛴다)
+const [first, ,second] = pokemons
+console.log(first,second) // '피카츄', '이상해씨'
+
+/**
+ * 객체 구조분해
+ */
+const { nickname, age } = {
+  nickname : '홍길동',
+  age:16
+}
+console.log(nickname ,age)
+
+/**
+ * map 배열 메소드
+ * forEach / Map의 차이
+ * map은 결과를 새로운 배열로 반환해준다.
+ */
+
+// const numbers =  [1,2,3]
+const doubleNumbers = numbers.map(num => num * 2)
+console.log(doubleNumbers) // [2,4,6]
+
+// const pokemons = ['피카츄', '고라파덕', '이상해씨']
+// map을 활용해서 문자열을 더해주세요 
+// '너로 정했다'
+// 변수명 namedPokemon
+// console.log(namedPokemon)
+
+const namedPokemon = pokemons.map(pokemon => pokemon + ', 너로 정했다')
+console.log(namedPokemon)
