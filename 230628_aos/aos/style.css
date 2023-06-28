@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+main{  
+  background-image: url('https://images.pexels.com/photos/5122182/pexels-photo-5122182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+section{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 3rem; /* 16px * 3 = 48px*/
+  overflow-x: hidden;
+}
+/* 홀수번째(odd)는 좌측정렬, 짝수번째(even)는 우측정렬 */
+section:nth-child(even){
+  justify-content: flex-end;
+}
+
+section p{
+  width: 50ch;
+  font-size: 2rem;
+  color:white;
+}
