@@ -72,3 +72,84 @@ const trainer = new Trainer('웅이')
 // trainer.name = '피카츄'
 trainer.showTrainerName()
 trainer.showPokemonName()
+
+/**
+ * 스프레드 연산자
+ * 배열에서도 쓸 수있고, 
+ * 객체에서도 쓸 수 있다. 
+ * ... (점 세개를 꼭 지켜주세요)
+ */
+
+const pokemons = ['피카츄', '고라파덕', '이상해씨']
+const newPoke = [...pokemons, '파이리']
+// pokemons.forEach(pokemon => newPoke.push(pokemon))
+// newPoke.push('파이리')
+console.log(newPoke)
+
+const numbers =  [1,2,3]
+// 4,5를 추가해서 newNumbers 배열을 새로 생성하세요.
+const newNumbers = [...numbers, 4, 5]
+console.log(newNumbers)
+
+const pokemonTrainer = {
+  name:'지우',
+  pokemon:"피카츄"
+}
+console.log(pokemonTrainer.name)
+
+const newTrainer = {
+  ...pokemonTrainer,
+  age: 20
+}
+
+console.log(newTrainer)
+
+const char = {
+  enLength: 26,
+}
+// char의 내용을 복사해서
+// alphabet : "characters" 속성을 추가해서
+const num = {
+  ...char,
+  alphabet: "characters"
+}
+console.log(num)
+
+/**
+ * rest 연산자
+ * args = arguments
+ */
+
+
+const filterNumber = (...args) => {
+  return args.filter(number => {
+    if(number === 1){
+      return number
+    }    
+  })
+}
+
+console.log(filterNumber(1,3,6,7,8))// [1]
+
+// filterAlphabet 
+// 'a','b','c','d' 이 인수들을 필터링
+// 조건 : alphabet === 'a'
+// 결과 : ['a']
+
+const filterAlphabet = (...args) => {
+  return args.filter(char => char === 'a')
+}
+
+console.log(filterAlphabet('a','b','c','d')) 
+// ['a'] , filter 메소드는 결과를 배열로 만들어준다. 
+
+// const pokemons = ['피카츄', '고라파덕', '이상해씨']
+// 변수명 : filterPokemon
+// 조건 : '피카츄"만 출력
+// 결가 : ['피카츄']
+
+const filterPokemon = (...args) => {
+  return args.filter(pokemon => pokemon === '피카츄')
+}
+
+console.log(filterPokemon(...pokemons))
