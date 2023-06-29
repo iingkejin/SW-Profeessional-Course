@@ -94,7 +94,9 @@ const numbers =  [1,2,3]
 // 4,5를 추가해서 newNumbers 배열을 새로 생성하세요.
 const newNumbers = [...numbers, 4, 5]
 console.log(newNumbers)
-
+/**
+ * 객체 구조분해
+ */
 const pokemonTrainer = {
   name:'지우',
   pokemon:"피카츄"
@@ -107,6 +109,11 @@ const newTrainer = {
 }
 
 console.log(newTrainer)
+// {
+//   name:'지우',
+//   pokemon:"피카츄"
+//   age:20
+// }
 
 const char = {
   enLength: 26,
@@ -135,7 +142,7 @@ const filterNumber = (...args) => {
   })
 }
 
-console.log(filterNumber(1,3,6,7,8))// [1]
+console.log(filterNumber(1,3,6,7,8))// [1,3]
 
 // filterAlphabet 
 // 'a','b','c','d' 이 인수들을 필터링
@@ -171,17 +178,17 @@ console.log(filterPokemon(...pokemons))
  */
 
 const [a, b] = [1, 2]
-console.log(a)
-console.log(b)
+console.log(a) // 1
+console.log(b) // 2
 
 // const pokemons = ['피카츄', '고라파덕', '이상해씨']
 // c,d,e 변수 3개에 구조분해해서 담아주세요
 // console.log(c,d,e) 결과 출력
 const [c,d,e] = pokemons
 console.log(c,d,e)
-// const newMons = [...pokemons, '파이리']
+// const newMons = [pokemons, '파이리']
 // console.log(newMons) // [['피카츄', '고라파덕', '이상해씨'],'파이리']
-// console.log(newMons.length)
+// console.log(newMons.length) // 2
 
 // 공백으로 처리한 부분은 skip(건너뛴다)
 const [first, ,second] = pokemons
