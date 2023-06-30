@@ -1,16 +1,27 @@
 import './App.css'
-import Button from './components/Button.jsx'
-import Heading from './components/Heading'
 import Flex from './components/Flex'
 
-function App() { 
+const images = [
+  {id: 1, url:'/image1.jpg', title:'비글'},
+  {id: 2, url:'/image2.jpg', title:'풍경'},
+  {id: 3, url:'/image3.jpg', title:'경치'},
+]
+// figure 태그 밑에 H2 태그를 이용해서
+// image.title 이라는 값을 이용해 출력해주세요
+// 주의사항 리액트코드는, 부모로 감싸서 출력해야돼요.
+
+function App() {   
   return (    
-    <>      
-      <Flex>       
-        <Heading title="안녕하세요"/>
-        <Button name="1번버튼" primary />
-        <Button name="2번버튼" secondary/>
-        <Button name="3번버튼" />
+    <>
+    <Flex>
+      {images.map(image => (
+        <>
+        <figure className="image-wrapper" key={image.id}>
+        <img className="image" src={image.url} alt={image.title}/>
+        </figure>
+        <h2>{image.title}</h2>
+        </>
+        ))}               
       </Flex>
     </>
   )

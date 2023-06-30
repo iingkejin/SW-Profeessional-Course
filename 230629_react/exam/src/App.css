@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+.image-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+.image{
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+}
