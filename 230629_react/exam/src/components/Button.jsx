@@ -13,7 +13,7 @@
 // { name, color, size}
 // ---------------------
 import style from "./Button.module.css"
-export default function Button({name,primary,secondary}){
+export default function Button({name, primary, secondary}){
   // 3항연산자
   const isPrimary = primary ? style.primary : ''
   const isSecondary = secondary ? style.secondary : ''
