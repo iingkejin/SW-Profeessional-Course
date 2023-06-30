@@ -21,14 +21,16 @@
 //곱하기 함수를 파일로 만들어서 export 시키고,
 // app.js 불러와서 실행하고 결과를 보세요
 
+// export default는 그냥 이름으로 가져온다.
 // import add from './add.js'
 // import multiply from './multiply.js'
 
 // import {add as plus} from './util.js'
+// export default가 아닐때는 중괄호{}로 묶어서 가져온다.
 // import {add,multiply} from './util.js'
 // console.log(plus(2))
 // console.log(multiply(3))
-
+// * all, 모든것
 import * as calc from './util.js'
 
 console.log(calc.add(2))

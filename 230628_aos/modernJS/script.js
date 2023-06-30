@@ -15,13 +15,14 @@
 // ES6, let / const
 // let 변화하는 내용을 넣을때 쓰는 변수선언법
 // const = constant 상수,변화하지 않는 내용을 담을때 씁니다.
+// let name; // undefined
 let name = '철수'
 name = '영희'
 console.log(name)
 
 const myName = '지우'
 // myName = '피카츄'
-console.log(myName)
+console.log(myName) // 에러
 
 // 함수
 // ES5 
