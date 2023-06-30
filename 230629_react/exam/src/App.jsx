@@ -1,5 +1,6 @@
 import './App.css'
 import Flex from './components/Flex'
+import Image from './components/Image'
 
 const images = [
   {id: 1, url:'/image1.jpg', title:'비글'},
@@ -15,12 +16,10 @@ function App() {
     <>
     <Flex>
       {images.map(image => (
-        <>
-        <figure className="image-wrapper" key={image.id}>
-        <img className="image" src={image.url} alt={image.title}/>
-        </figure>
-        <h2>{image.title}</h2>
-        </>
+        <div key={image.id}>
+          <Image url={image.url} title={image.title}/>
+          <h2>{image.title}</h2>
+        </div>
         ))}               
       </Flex>
     </>
