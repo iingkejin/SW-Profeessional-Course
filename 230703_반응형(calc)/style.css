@@ -37,6 +37,12 @@ a {
   border-radius: 7px;
   background-color: #fff;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 400ms ease-in-out;
+}
+
+.menu_box:hover {
+  transform: scale(1.04);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
 }
 
 .img-box {
@@ -48,5 +54,27 @@ a {
 
 .img-box img {
   position: absolute;
-  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(2px);
+}
+
+.menu_title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 20px;
+}
+
+.menu_info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.date,
+.count {
+  font-size: 14px;
+  color: #666;
 }
