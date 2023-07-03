@@ -1,3 +1,52 @@
-body {
-  background-color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #e5e5e5;
+  /* 마진 상쇄 현상 */
+  /* 인접해 있는 블록요소 두 개가 겹칠 때 발생(상,하) */
+  /* 사이에 1px 이라도 간격이 생기면 마진 상쇄 현상이 사라진다. */
+  border: 1px solid transparent;
+}
+
+.title {
+  width: 250px;
+  margin: 30px 0 10px 10px;
+  padding: 20px;
+  color: white;
+  background-color: #06c;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.menu_box {
+  display: inline-block;
+  width: calc((100% - 80px) / 4);
+  margin: 20px 10px;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #fff;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.img-box {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.img-box img {
+  position: absolute;
+  
 }
