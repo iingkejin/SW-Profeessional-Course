@@ -58,6 +58,11 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   filter: blur(2px);
+  transition: filter 400ms ease-in-out;
+}
+
+.menu_box:hover .img-box img {
+  filter: blur(0);
 }
 
 .menu_title {
