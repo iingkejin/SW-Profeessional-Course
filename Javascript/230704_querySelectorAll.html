@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <p class="hello">안녕</p>
+    <p class="hello">안녕</p>
+    <p class="hello">안녕</p>
+  </div>
+  <script>
+    // javascript / jQuery HTML안 글자 '안녕' -> 'hello'
+    // Javacript
+    // document.querySelectorAll('.hello')[0].innerHTML = 'hello';
+    // document.querySelectorAll('.hello')[1].innerHTML = 'hello';
+    // document.querySelectorAll('.hello')[2].innerHTML = 'hello';
+    
+    let hello = document.querySelectorAll('.hello')
+    console.log(hello)
+    hello.forEach(function(changeColor){
+      changeColor.style.color = 'green';
+    })
+
+    // jQuery
+    $('.hello').html('jQuery!');
+    $('.hello').css('color', 'blue');
+
+    // document.write
+    let names = ['예진', '지은', '한나', '서우']
+    console.log(names)
+
+    names.forEach(function(name){
+      document.write(`<h1>${name}</h1>`);
+      document.write('<h2>' + name + '</h2>');
+    })
+  </script>
+</body>
+</html>
