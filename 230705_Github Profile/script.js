@@ -5,6 +5,7 @@
 let dropdownBtn = document.querySelector('.dropdown-btn');
 let dropdownMenu = document.querySelector('.dropdown-menu');
 
-dropdownBtn.addEventListener('click', function(){
+dropdownBtn.addEventListener('click', function(e){
+  e.preventDefault();
   dropdownMenu.classList.toggle('active');
 })
