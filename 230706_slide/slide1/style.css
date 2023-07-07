@@ -16,8 +16,8 @@ li {
   /* viewport width * 3(이미지 수) */
   width: 300vw;
   height: 600px;
-  /* transform: translateX(-100vw);
-  transition: transform 1s; */
+  /* transform: translateX(-200vw); */
+  transition: transform 1s;
 }
 
 .slide-list li {
