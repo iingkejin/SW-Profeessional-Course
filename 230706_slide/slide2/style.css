@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.slide-wrapper {
+  overflow: hidden;
+}
+
+.slide-list {
+  display: flex;
+  /* viewport width * 3(이미지 수) */
+  width: 300vw;
+  height: 600px;
+  /* transform: translateX(-200vw); */
+  transition: transform 1s;
+}
+
+.slide-list li {
+  width: 100vw;
+  height: 100%;
+}
+
+.slide-list li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-group button {
+  margin-right: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #888;
+}
+
+.btn-group button:last-child {
+  margin-right: 0;
+}
