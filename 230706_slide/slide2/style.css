@@ -54,6 +54,10 @@ li {
   background-color: #fff;
 }
 
+.btn-group button.active {
+  background-color: dodgerblue;
+}
+
 .btn-group button:last-child {
   margin-right: 0;
 }
