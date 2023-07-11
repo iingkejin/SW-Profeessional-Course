@@ -43,8 +43,14 @@ a {
 
 .sub {
   position: absolute;
-  display: none;
   width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 500ms ease-in-out;
+}
+
+.sub.active {
+  max-height: 270px;
 }
 
 .sub li a {
