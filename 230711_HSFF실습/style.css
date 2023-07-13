@@ -235,3 +235,66 @@ footer {
 .footer-bottom p {
   margin-top: 10px;
 }
+
+@media screen and (max-width : 1200px) {
+  .lg-hidden {
+    display: block;
+  }
+
+  .lg-only {
+    display: none;
+  }
+
+  .gnb-log {
+    padding: 20px 30px;
+  }
+  
+  .gnb-main {
+    padding: 10px 30px;
+  }
+
+  .gnb-open-btn {
+    border: none;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 200px;
+    height: 100vh;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    transform: translateX(-200px);
+    transition: transform 500ms ease-in-out;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .sidebar-btn {
+    float: right;
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+  }
+
+  .sidebar-list {
+    clear: right;
+    margin-top: 20px;
+  }
+
+  .sidebar-item a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .sidebar-item:first-child a {
+    border-top: 1px solid #ccc;
+  }
+}
