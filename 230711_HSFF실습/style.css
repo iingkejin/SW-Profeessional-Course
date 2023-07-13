@@ -75,10 +75,16 @@ li {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  display: none;
+  /* display: none; */
+  max-height: 0;
+  overflow: hidden;
   width: 200px;
   background-color: #fff;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.sub.active {
+  max-height: 265px;
 }
 
 .sub::before {
