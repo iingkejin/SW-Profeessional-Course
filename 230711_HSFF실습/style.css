@@ -151,3 +151,87 @@ li {
 .slide-btn li:last-child:after {
   content: none;
 }
+
+footer {
+  margin-top: 60px;
+  color: #aaa;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  background-color: #414244;
+  padding: 0 40px;
+}
+
+.footer-top a {
+  color: #aaa;
+}
+
+.foot-left {
+  display: flex;
+}
+
+.foot-left li a {
+  display: block;
+  padding: 20px;
+  font-size: 18px;
+  border-left: 1px solid #ccc;
+}
+
+.foot-left li:last-child a {
+  border-right: 1px solid #ccc;
+}
+
+.foot-left li:nth-child(2) a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.foot-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+}
+
+.number {
+  color: #fff;
+  font-size: 20px;
+}
+
+.time {
+  font-size: 14px;
+}
+
+.footer-bottom {
+  padding: 50px 40px;
+  background-color: #2d2d30;
+}
+
+.footer-bottom img {
+  opacity: .5;
+}
+
+.footer-bottom ul {
+  display: flex;
+  margin-top: 30px;
+}
+
+.footer-bottom ul li::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background-color: #666;
+  margin: 0 16px;
+  transform: rotate(30deg);
+}
+
+.footer-bottom ul li:first-child:before {
+  content: none;
+}
+
+.footer-bottom p {
+  margin-top: 10px;
+}
