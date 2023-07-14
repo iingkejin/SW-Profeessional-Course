@@ -61,7 +61,7 @@ li {
 }
 
 .gnb-main-item a:hover,
-.gnb-main-item a.active {
+.gnb-main-item a.on {
   color: darkblue;
 }
 
