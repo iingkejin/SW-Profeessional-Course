@@ -124,6 +124,7 @@ li {
   display: flex;
   width: 300vw;
   height: 600px;
+  transition: transform 300ms ease-in-out;
 }
 
 .slide-list li {
