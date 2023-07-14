@@ -71,6 +71,22 @@ li {
   padding: 16px;
 }
 
+.square {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+  display: none;
+  width: 10px;
+  height: 10px;
+  background-color: #113676;
+}
+
+.square.is-active {
+  display: inline-block;
+}
+
 .sub {
   position: absolute;
   left: 50%;
@@ -78,6 +94,7 @@ li {
   /* display: none; */
   max-height: 0;
   overflow: hidden;
+  transition: max-height 500ms ease-in-out;
   width: 200px;
   background-color: #fff;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
@@ -87,7 +104,7 @@ li {
   max-height: 265px;
 }
 
-.sub::before {
+/* .sub::before {
   content : '';
   position: absolute;
   top: -5px;
@@ -96,7 +113,7 @@ li {
   width: 10px;
   height: 10px;
   background-color: #113676;
-}
+} */
 
 .slide-wrapper {
   position: relative;
