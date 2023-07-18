@@ -13,6 +13,11 @@ li {
   list-style: none;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 .lg-hidden {
   display: none;
 }
@@ -258,6 +263,66 @@ footer {
 
 .footer-bottom p {
   margin-top: 10px;
+}
+
+.popup {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 480px;
+  transform: translateX(-50%);
+  z-index: 300;
+  border: 3px solid darkblue;
+  background-color: #fff;
+}
+
+.popup-top {
+  padding: 30px;
+}
+
+.popup .close-btn {
+  text-align: right;
+}
+
+.close-btn button {
+  font-size: 24px;
+}
+
+.popup h2 {
+  margin-top: 20px;
+  color: darkblue;
+}
+
+.popup img {
+  margin-top: 20px;
+}
+
+.content-btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.content-btn button {
+  padding: 14px 80px;
+  color: #fff;
+  background-color: #5baa96;
+  transition: background-color 300ms;
+}
+
+.content-btn button:hover {
+  cursor: pointer;
+  background-color: #4c9381;
+}
+
+.popup-check {
+  padding: 12px 20px;
+  border-top: 1px solid #ccc;
+  background-color: #f5f5f5;
+}
+
+.popup-check span {
+  color: #666;
+  font-size: 14px;
 }
 
 @media screen and (max-width : 1200px) {
