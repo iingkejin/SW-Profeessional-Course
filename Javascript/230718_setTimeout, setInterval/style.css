@@ -1,8 +1,10 @@
 .count {
   padding: 20px;
   background-color: #ddd;
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
 }
 
 .count.is-active {
-  display: none;
+  opacity: 0;
 }
