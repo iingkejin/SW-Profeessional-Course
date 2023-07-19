@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascirpt 복합연산자</title>
+</head>
+<body>
+  <script>
+    // 1. 산술 연산자 : +, -, /(나누기), *(곱합기), %(나머지값), **(거듭제곱)
+    // console.log(30 % 10);
+
+    // 2. 대입 연산자 : =
+    // let str1 = 'Hello';
+    // let srt2 = 'World!';
+    // 문자열은 더하기 가능
+    // 문자열 빼기는 불가능
+    // NaN : Not a Number
+    // console.log(str1 - srt2)
+    
+    // 3. 복합 대입 연산자 : +=, -=, /=, *=, %=
+    // let num = 10;
+
+    // let은 값 할당없이 변수만 먼저 선언 가능
+    // let result_1, result_2, result_3, result_4, result_5;
+    // result_1 = result_2 = result_3 = result_4 = result_5 = 10;
+    // result_1, result_2, result_3, result_4, result_5 = 20
+    // console.log(result_1, result_2, result_3, result_4, result_5)
+
+    // += : result += num
+    // result_1 = result_1 + num
+    // result_1 += num
+    // console.log(result_1)
+
+    // -= : result -= num
+    // result = result - num
+
+
+    // 4. 증가 감소 연산자
+    let num, result;
+    num = 10;
+
+    // (++)증감연산자가 뒤에 위치할 경우
+    // result에 num이 복사되고, num++한 것은 다음 값 부터 적용
+    // result = num++;
+    // console.log(result)
+    // console.log(num)
+
+    // (++)증감연산자가 앞에 위치할 경우
+    // 이 행에서 ++값이 반영되고, 업데이트 된 값이 
+    // result라는 변수에 저장된다.
+    result = ++num;
+    console.log(result)
+
+    // 자바스크립트는 동적언어라서 변수 선언시 타입을 지정 X
+    // 값이 할당되는 순간 그 값에 따라서 타입이 결정
+    // 장점 : 자유도와 유연성이 높다.
+    // 단점 
+    // 1. 예상 못한 버그가 발생할 확률이 높다.
+    // 2. 프로젝트의 규모가 커질수록 유지보수 비용 증가, 안정성 저하
+    // 타입스크립트는 선언과 동시에 어떤 타입 값을 넘길건지 작성 해야한다.
+    // 해당 타입이 아닌 다른 데이터를 넘긴다면 바로 컴파일러 에러 발생! -> 사전에 빠른 대응 가능
+    // let num:number = 1;
+    let num1 = 5;
+    console.log(typeof(num1))
+
+    // Typescript는 마이크로소프트가 개발하고 있는 오픈소스 프로그래밍 언어
+    // 자바스크립트에 타입을 부여한 언어, 자바스크립트 상위 집합
+  </script>
+</body>
+</html>
