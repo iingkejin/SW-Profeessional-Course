@@ -5,10 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Img modal</title>
   <link rel="stylesheet" href="./style.css">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="wrapper">
-    
+    <ul class="modal-list">
+      <li class="open-btn">모달열기</li>
+      <li><img src="./images/img1.jpg" alt="쿼카"></li>
+      <li><img src="./images/img2.jpg" alt="해달"></li>
+      <li><img src="./images/img3.jpg" alt="리트리버"></li>
+      <li><img src="./images/img4.jpg" alt="해달2"></li>
+      <li><img src="./images/img5.jpg" alt="쿼카정면"></li>
+    </ul>
+
+    <div class="modal-box modal">
+      <div class="modal-head">
+        <p>모달 타이틀</p>
+        <button type="button" class="modal-close close-btn">X</button>
+      </div>
+      <div class="modal-sec">
+        <img src="./images/img3.jpg" alt="리트리버">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi consectetur id quisquam unde voluptatem, possimus porro culpa nemo et cupiditate quidem eligendi suscipit nobis, accusantium saepe, reiciendis labore explicabo officia.</p>
+      </div>
+    </div>
+
+    <div class="img-modal-box modal">
+      <button type="button" class="img-modal-btn close-btn">X</button>
+      <div class="img-modal-wrapper">
+        <img src="./images/img3.jpg" alt="리트리버">
+      </div>
+    </div>
+
+    <div class="overlay"></div>
   </div>
   <script src="./js/script.js"></script>
 </body>
