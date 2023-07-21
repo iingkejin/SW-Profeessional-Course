@@ -5,9 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>slide4 setInterval</title>
   <link rel="stylesheet" href="./style.css">
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/522c2b7a73.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="wrapper"></div>
+  <div class="wrapper">
+    <div class="slide-list">
+      <div class="slide-item">
+        <img src="./images/img_visual1.jpg" alt="식자재 유통의 베스트 솔루션">
+        <p>식자재 유통의 베스트 <br>솔루션</p>
+      </div>
+      <div class="slide-item">
+        <img src="./images/img_visual2.jpg" alt="신선하고 차별화된 식자재 Provider">
+        <p>신선하고 차별화된 식자재<br>Provider</p>
+      </div> 
+      <div class="slide-item">
+        <img src="./images/img_visual3.jpg" alt="고객의 성공을 위해 함께하는 파트너">
+        <p>고객의 성공을 위해<br>함께하는 파트너</p>
+      </div> 
+    </div>
+
+    <button id="prev" type="button">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="next" type="button">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    <div id="dots"></div>
+  </div>
   <script src="./js/script.js"></script>
 </body>
 </html>
