@@ -19,6 +19,7 @@ nav {
   justify-content: space-between;
   background-color: #ccc;
   padding: 10px 30px;
+  transition: background-color 300ms ease-in-out;
 }
 
 .logo img {
@@ -32,4 +33,11 @@ button i {
 .box {
   height: 3000px;
   background-color: cadetblue;
+}
+
+.lorem {
+  width: 500px;
+  height: 300px;
+  overflow-y: scroll;
+  margin: 30px auto;
 }
