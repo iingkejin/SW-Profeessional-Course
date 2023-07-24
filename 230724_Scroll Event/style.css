@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  /* width : 100하고 동일 */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ccc;
+  padding: 10px 30px;
+}
+
+.logo img {
+  width: 80px;
+}
+
+button i {
+  font-size: 24px;
+}
+
+.box {
+  height: 3000px;
+  background-color: cadetblue;
+}
