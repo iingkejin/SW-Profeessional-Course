@@ -29,15 +29,34 @@
 
 
 // 함수로 구현
-function tabOpen(){
+function tabOpen(num){
   $('.tab-item').removeClass('blue');
   $('.tab-content').removeClass('show');
 
-  $('.tab-item').ea(i).addClass('blue');
-  $('.tab-content').eq(i).addClass('show');
+  $('.tab-item').eq(num).addClass('blue');
+  $('.tab-content').eq(num).addClass('show');
 }
 
-// 이벤트리스너 1개
-document.querySelector('.tab-list').addEventListener('click', function(){
-  
+// 이벤트리스너 1개 사용
+// document.querySelector('.tab-list').addEventListener('click', function(e){
+//   // e.target(클릭된 요소)가 버튼(tab-item) 0이라면
+//   if(e.target == document.querySelectorAll('.tab-item')[0]) {
+//     tabOpen(0);
+//   } else if (e.target == document.querySelectorAll('.tab-item')[1]) {
+//     tabOpen(1);
+//   } else if (e.target == document.querySelectorAll('.tab-item')[2]) {
+//     tabOpen(2);
+//   }
+// })
+
+
+// dataset으로 구현
+// html에 유저는 볼 수 없게 몰래 정보를 숨겨둘 수 있다.
+// data-자료이름="값"
+// dataset.자료이름
+document.querySelector('.tab-list').addEventListener('click', function(e){
+  // 지금 클릭한 버튼에 숨겨져 있는 dataset.id을 
+  // tabOpen함수의 매개변수 값으로 넘겨준다.
+  tabOpen(e.target.dataset.id);
+  console.log(e.target.dataset.id);
 })
