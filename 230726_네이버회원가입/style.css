@@ -107,3 +107,32 @@ label p {
   color: #666;
   background-color: #fff;
 }
+
+.req-alert {
+  visibility: hidden;
+  padding: 20px 0;
+  font-size: 14px;
+  color: red;
+}
+
+.btn {
+  width: calc((100% - 8px) / 2);
+  height: 55px;
+  border: none;
+  color: #fff;
+  background-color: #08a600;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.group-join {
+  margin-top: 12px;
+}
+
+.group-join a {
+  transition: color 300ms ease-in-out;
+}
+
+.group-join a:hover {
+  color: #08a600;
+}
