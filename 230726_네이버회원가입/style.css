@@ -41,11 +41,69 @@ section label {
 }
 
 label input[type='checkbox'] {
-  /* display: none; */
+  display: none;
+}
+
+.checkbox-img {
+  margin-right: 8px;
+}
+
+label p {
+  width: calc(100% - 32px);
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .total .checkbox-img {
   width: 24px;
   height: 24px;
   background-image: url('./images/pc_check_off_24.png');
+}
+
+.total .checkbox-img.checked {
+  background-image: url('./images/pc_check_on_l_24.png');
+}
+
+.agree {
+  margin-top: 40px;
+}
+
+.agree .checkbox-img {
+  width: 20px;
+  height: 20px;
+  background-image: url('./images/pc_chcek_off_s_20.png');
+}
+
+.agree .checkbox-img.checked {
+  background-image: url('./images/pc_chcek_on_s_20.png');
+}
+
+.agree label p {
+  display: flex;
+  align-items: center;
+}
+
+.agree label span {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.text-primary {
+  color: #08a600;
+}
+
+.text-secondary {
+  color : #8e8e8e;
+}
+
+.terms {
+  height: 130px;
+  overflow-y: scroll;
+  margin-top: 10px;
+  padding: 16px;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  color: #666;
+  background-color: #fff;
 }
