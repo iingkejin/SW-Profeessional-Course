@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+.global-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 768px;
+  margin: 50px auto;
+}
+
+.logo img {
+  width: 240px;
+}
+
+.lang {
+  position: absolute;
+  right: 10px;
+}
+
+.join-form {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+section label {
+  display: flex;
+}
+
+label input[type='checkbox'] {
+  /* display: none; */
+}
+
+.total .checkbox-img {
+  width: 24px;
+  height: 24px;
+  background-image: url('./images/pc_check_off_24.png');
+}
