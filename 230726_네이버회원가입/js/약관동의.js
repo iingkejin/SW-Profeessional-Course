@@ -4,6 +4,7 @@
 let labels = document.querySelectorAll('label');
 let totalLabel = document.querySelector('.total label');
 let agreeAll = document.querySelectorAll('.agree');
+let agreeLabel = document.querySelectorAll('.agree label');
 
 
 labels.forEach(function(label){
@@ -47,3 +48,18 @@ agreeAll.forEach(function(agree){
 // .agree label이 모두 체크되지 않았을 때
 // .total label 안 .checkbox-img checked class remove
 // .total label 안 input checked에 checked 속성 false
+agreeLabel.forEach(function(alabel){
+  alabel.addEventListener('click', function(){
+    let len = document.querySelectorAll('.agree .checkbox-img').length;
+    let chklen = document.querySelectorAll('.agree .checked').length;
+    let unchk = len - chklen;
+
+    if(unchk == 0) {
+      document.querySelector('.total label .checkbox-img').classList.add('checked');
+      document.querySelector('.total input[type="checkbox"]').checked = true;
+    } else {
+      document.querySelector('.total label .checkbox-img').classList.remove('checked');
+      document.querySelector('.total input[type="checkbox"]').checked = false;
+    }
+  })
+})
