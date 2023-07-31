@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript 정규식</title>
+</head>
+<body>
+  <script>
+    // Regular Expression
+    // 문자 안에 특정 문자가 포함되어 있는지 검사 해주는 함수 => includes('')
+    let para = '안녕하세요';
+    // 해당 문자를 포함하고 있다면 true 반환
+    // 해당 문자를 포함하고 있지 않다면 false
+    // console.log(para.includes('미안'));
+    // 이 함수는 특정 문자를 우리가 직접 지정해야 하고,
+    // 한글이 있냐, 영어가 있냐 이런것들은 검사하기 어렵다.
+    // 그래서 사용하는게 정규식(Regular Expression)
+
+    // 알파벳 소문자 a to z 까지 하나라도 들어있는지를 검사
+    let a = /[a-z]/;
+    // console.log(a.test('RRFF'))
+
+    // 알파벳 대문자 A to Z 까지 하나라도 들어있는지를 검사
+    let b = /[A-Z]/;
+    // console.log(b.test('adsgsd'))
+
+    // 모든 알파벳(대,소) 중 하나라도 포함 됐는지 검사
+    let c = /[a-zA-Z]/;
+    // console.log(c.test('안녕하세요'))
+
+    // 아무 한글 문자 1개라도 포함 됐는지
+    let d = /[ㄱ-ㅎㅏ-ㅣ가-힣]/;
+    console.log(d.test('가나다라마바사'))
+  </script>
+</body>
+</html>
