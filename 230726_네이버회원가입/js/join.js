@@ -10,3 +10,6 @@ $('input').focusout(function(){
 
 let idveri, pwveri, pwchkveri, nameveri, bitrhveri, genderveri, phoneveri, addressveri = false;
 let mailveri = true;
+
+
+
