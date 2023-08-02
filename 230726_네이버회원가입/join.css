@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.global-header {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.logo img {
+  width: 240px;
+}
+
+.join-box-list {
+  max-width: 468px;
+  margin: 0 auto;
+}
+
+.join-box-item {
+  margin-bottom: 20px;
+}
+
+.inputbox {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  margin-top: 10px;
+  padding: 10px 12px;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  cursor: pointer;
+}
+
+.inputbox input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.inputbox div {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.inputbox p {
+  margin-right: 5px;
+}
+
+.inputbox img {
+  height: 24px;
+}
