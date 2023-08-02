@@ -10,7 +10,123 @@
 </head>
 <body>
   <div class="wrapper">
+    <header class="global-header">
+      <h1 class="logo">
+        <a href="https://www.naver.com">
+          <img src="./images/logo.png" alt="네이버 로고">
+        </a>
+      </h1>
+    </header>
 
+    <section class="join-box-list">
+      <form action="./submit.html" id="join-form">
+        <div class="join-box-item userid">
+          <label>아이디
+            <div class="inputbox">
+              <!-- name : form action에 전달하는 파라미터 값
+                key, value 형식으로 데이터가 저장
+                {userid : 이예진1} -->
+              <input type="text" name="userid">
+              <div>@naver.com</div>
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+
+        <div class="join-box-item userpw">
+          <label>비밀번호
+            <div class="inputbox">
+              <input type="password" name="userpw">
+              <div>
+                <p></p>
+                <img src="./images/m_icon_pw_step_01.png" alt="비밀번호 아이콘">
+              </div>
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div> 
+
+        <div class="join-box-item userpw-chk">
+          <label>비밀번호 재확인
+            <div class="inputbox">
+              <input type="password" name="userpw-chk">
+              <div>
+                <img src="./images/m_icon_pw_step_02.png" alt="비밀번호 재확인 아이콘">
+              </div>
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+
+        <div class="join-box-item username">
+          <label>이름
+            <div class="inputbox">
+              <input type="text" name="username">
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+
+        <div class="join-box-item birth">
+          <label>생년월일
+            <div class="three-box">
+              <div class="inputbox">
+                <input type="text" name="year" id="year" maxlength="4" placeholder="년(4자)">
+              </div>
+              <div class="inputbox">
+                <select name="month" id="month">
+                  <option value="">월</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+              <div class="inputbox">
+                <input type="text" name="date" id="date" maxlength="2" placeholder="일">
+              </div>
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+
+        <div class="join-box-item gender">
+          <p>성별</p>
+          <div class="three-box">
+            <div class="inputbox">
+              <p>남자</p>
+              <input type="radio" name="gender" value="0" id="male">
+            </div>
+            <div class="inputbox">
+              <p>여자</p>
+              <input type="radio" name="gender" value="1" id="female">
+            </div>
+            <div class="inputbox">
+              <p>선택안함</p>
+              <input type="radio" name="gender" value="2" id="no-gender">
+            </div>
+          </div>
+        </div>
+
+        <div class="join-box-item usermail">
+          <label>본인 확인 이메일
+            <span class="text-secondary">(선택)</span>
+            <div class="inputbox">
+              <input type="text" name="usermail" id="email" placeholder="선택입력">
+            </div>
+          </label>
+          <p class="warn"></p>
+        </div>
+      </form>
+    </section>
   </div>
   <script src="./js/join.js"></script>
 </body>
