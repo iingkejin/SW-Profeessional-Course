@@ -63,3 +63,56 @@ a {
 .inputbox img {
   height: 24px;
 }
+
+.three-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.three-box .inputbox {
+  width: calc((100% - 20px) / 3);
+}
+
+.inputbox select {
+  width: 100%;
+  font-size: 18px;
+  color: #777;
+  border: none;
+  outline: none;
+}
+
+.gender .inputbox {
+  display: flex;
+  justify-content: center;
+}
+
+.gender input[type="radio"] {
+  display: none;
+}
+
+.phonenum,
+.postnum {
+  display: flex;
+  align-items: center;
+}
+
+.phonenum .inputbox,
+.postnum .inputbox {
+  width: calc(100% - 120px);
+  margin-right: 5px;
+}
+
+.phonenum button,
+.postnum button {
+  width: 115px;
+  height: 52px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.disinput,
+.disinput input {
+  cursor: not-allowed;
+  background-color: #f7f7f7;
+}
