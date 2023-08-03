@@ -210,4 +210,27 @@ $('.gender .inputbox').on('click', function(){
 })
 
 
+// 본인 확인 이메일
+// .usermail input에 focusout 됐을 때
+// 필수사항이 아니라 선택사항 이니까 기본적으로 mailveri = true;
+// 사용자가 값을 입력하지 않았을 경우 그대로 유지
+// 값을 입력 했는데 정규식에 맞지 않게 입력 => false 
+// .usermail .warn '이메일 주소를 다시 확인해주세요.'
+$('.usermail input').focusout(function(){
+  let mail = $(this).val();
+  // 대소문자, 숫자로 시작 가능 @ 다음에 naver.com 까지 나와야함
+  let mailExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+
+  if(mail.length == 0) {
+    $('.usermail .warn').empty();
+  } else if(!mailExp.test(mail)) {
+    mailveri = false;
+    $('.usermail .warn').html('<span class="text-red">이메일 주소를 다시 확인 해주세요.</span>')
+  } else {
+    $('.usermail .warn').empty();
+  }
+})
+
+
+
 
