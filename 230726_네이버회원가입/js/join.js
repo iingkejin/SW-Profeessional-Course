@@ -193,3 +193,21 @@ $('#year, #month, #date').focusout(function(){
 })
 
 
+// 성별
+// .gender .inputbox를 클릭 했을 때
+// .gender 모든 .inputbox에 .btn-primary class remove
+// .gender .inputbox안 모든 input radio에 checked false
+// 클릭된 자신에게만 .btn-primary class add
+// 클릭된 자신에게만 input radio에 checked true
+// genderveri = true;
+$('.gender .inputbox').on('click', function(){
+  $('.gender .inputbox').removeClass('btn-primary');
+  // prop => jQuery에서 radio 버튼을 제어할 때 사용
+  $('.gender .inputbox input[type="radio"]').prop('checked', false);
+  $(this).addClass('btn-primary');
+  $(this).children('input[type="radio"]').prop('checked', true);
+  genderveri = true;
+})
+
+
+
