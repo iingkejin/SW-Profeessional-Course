@@ -261,5 +261,13 @@ $('.usermail input').focusout(function(){
 
 
 
+// 휴대전화
+// .phonenum input에서 focusout 됐을 때
+// .phonenum input value length가 0이라면(조건)
+// .phonenum .warn에 text-red class '필수 정보입니다.
 
+// #veribtn(인증번호 받기)를 클릭 했을 때
+// .phonenum input value에 숫자를 제외한 모든 문자를 제거하고,
+// 제거한 값을 변수에 담아서 input에 다시 넣어준다.
 
+// .phonenum input value length가 10~11 자리가 아니라면(조건1)
