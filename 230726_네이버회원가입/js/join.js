@@ -54,3 +54,33 @@ $('.userpw input').focusout(function(){
     $('.userpw .inputbox img').attr('src', './images/m_icon_pw_step_04.png')
   }
 })
+
+
+// 비밀번호 재확인
+// .userpw-chk input에 focusout 됐을 때 입력된 값이 0이라면(조건)
+// .userpw-chk .warn에 빨간색 글자로 필수 정보 입니다. (실행문1)
+// 우측 아이콘 이미지를 원래대로 변경 (실행문2)
+
+// .userpw input값이랑 .userpw-chk input이 같은가? (조건2)
+// pwchkveri에 true
+// .warn에 뜨는 경고메세지 화면에서 사라지게 한다.
+// 우측 아이콘 이미지를 바꿔준다.
+
+// 그렇지 않다면 else (0이 아니고, 일치하지 않을 때)
+// .userpw-chk .warn에 비밀번호가 일치하지 않습니다. (text-red)
+// 우측 아이콘 이미지를 원래대로 변경(02)
+$('.userpw-chk input').focusout(function(){
+  let userPwChk = $(this).val();
+
+  if(userPwChk.length == 0) {
+    $('.userpw-chk .warn').html('<span class="text-red">필수 정보 입니다.</span>');
+    $('.userpw-chk .inputbox img').attr('src', './images/m_icon_pw_step_02.png');
+  } else if(userPwChk == $('.userpw input').val()) {
+    pwchkveri = true;
+    $('.userpw-chk .warn').empty();
+    $('.userpw-chk .inputbox img').attr('src', './images/m_icon_pw_step_07.png');
+  } else {
+    $('.userpw-chk .warn').html('<span class="text-red">비밀번호가 일치하지 않습니다.</span>');
+    $('.userpw-chk .inputbox img').attr('src', './images/m_icon_pw_step_02.png');
+  }
+})
