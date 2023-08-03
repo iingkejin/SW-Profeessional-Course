@@ -84,3 +84,27 @@ $('.userpw-chk input').focusout(function(){
     $('.userpw-chk .inputbox img').attr('src', './images/m_icon_pw_step_02.png');
   }
 })
+
+
+// 이름
+// .username input에 focusout 됐을 때 입력된 값이 0이라면(조건)
+// .warn에 text-red 필수 정보 입니다.
+// else if
+// 정규식 한글 최소 2~5글자 (조건2)
+// .warn에 text-red 한글로 2~5글자 사이로 작성하세요.
+// else 
+// .warn에 들어있는 경고메세지를 지워준다. 
+// nameveri = true;
+$('.username input').focusout(function(){
+  let userName = $('.username input').val();
+  let nameExp = /^[가-힣]{2,5}$/;
+
+  if(userName.length == 0) {
+    $('.username .warn').html('<span class="text-red">필수 정보입니다.</span>');
+  } else if(!nameExp.test(userName)) {
+    $('.username .warn').html('<span class="text-red">2~5글자 사이의 한글로 입력하세요.</span>');
+  } else {
+    nameveri = true;
+    $('.username .warn').empty();
+  }
+})
