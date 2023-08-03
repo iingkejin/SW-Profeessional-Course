@@ -8,7 +8,7 @@ $('input').focusout(function(){
   $(this).parent('.inputbox').removeClass('border-act');
 })
 
-let idveri, pwveri, pwchkveri, nameveri, bitrhveri, genderveri, phoneveri, addressveri = false;
+let idveri = pwveri = pwchkveri = nameveri = bitrhveri = genderveri = phoneveri = addressveri = false;
 let mailveri = true;
 
 
@@ -40,11 +40,13 @@ $('.userpw input').focusout(function(){
   let pwExp = /^[A-Za-z0-9`~!@#\$%\^&\*\(\)\{\}\[\]\-_=\+\\|;:'"<>,\./\?]{8,20}$/
 
   if(userPw.length == 0) {
-    $('.userpw .warn').html('<span class="text-red">필수정보 입니다.</span>')
+    $('.userpw .warn').html('<span class="text-red">필수정보 입니다.</span>');
+    $('.userpw .inputbox span').empty();
+    $('.userpw .inputbox img').attr('src', './images/m_icon_pw_step_01.png');
   } else if(!pwExp.test(userPw)) {
     $('.userpw .warn').html('<span class="text-red">8~20자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</span>')
     $('.userpw .inputbox p').html('<span class="text-red">사용불가</span>');
-    $('.userpw .inputbox img').attr('src', './images/m_icon_pw_step_10.png')
+    $('.userpw .inputbox img').attr('src', './images/m_icon_pw_step_10.png');
   } else {
     pwveri = true;
     $('.userpw .warn').empty();
