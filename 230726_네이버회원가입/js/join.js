@@ -171,20 +171,25 @@ $('#year, #month, #date').focusout(function(){
 
   // 사용자가 입력한 year, month, date 값으로 Date 객체 생성
   let birth = new Date(year, month, date);
-  console.log(birth)
   birth = birth.getTime();
-  console.log(birth)
 
   if(year.length != 4) {
-    $('.birth .warn').html('<span class="text-red">태어난 년도 4자리를 정확하게 입력하세요.</span>')
+    $('.birth .warn').html('<span class="text-red">태어난 년도 4자리를 정확하게 입력하세요.</span>');
   } else if(month.length == 0) {
-    $('.birth .warn').html('<span class="text-red">태어난 월을 선택하세요.</span>')
-  } else if(date.length == 0) {
-    $('.birth .warn').html('<span class="text-red">태어난 일(날짜) 2자리를 정확하게 입력하세요.</span>')
+    $('.birth .warn').html('<span class="text-red">태어난 월을 선택하세요.</span>');
+  } else if(date.length == 0 || date > 31 || date <= 0) {
+    $('.birth .warn').html('<span class="text-red">태어난 일(날짜) 2자리를 정확하게 입력하세요.</span>');
   } else if(isNaN(year * month * date)) {
     // is Not a Number
-    $('.birth .warn').html('<span class="text-red">생년월일을 다시 확인 해주세요.</span>')
+    $('.birth .warn').html('<span class="text-red">생년월일을 다시 확인 해주세요.</span>');
   } else if(now - year > 100) {
-    $('.birth .warn').html('<span class="text-red">정말이세요?</span>')
+    $('.birth .warn').html('<span class="text-red">정말이세요?</span>');
+  } else if(nowStamp < birth) {
+    $('.birth .warn').html('<span class="text-red">미래에서 오셨군요.^^</span>');
+  } else {
+    bitrhveri = true;
+    $('.birth .warn').empty();
   }
 })
+
+
