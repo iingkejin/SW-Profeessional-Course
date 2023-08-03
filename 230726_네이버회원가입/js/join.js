@@ -8,13 +8,26 @@ $('input').focusout(function(){
   $(this).parent('.inputbox').removeClass('border-act');
 })
 
+// 필수항목인 모든 변수에 false 값 할당 후
+// 각 해당조건을 충족 했을 때 true값으로 변경
+// 마지막에 필수항목 변수가 모두 true라면 submit
+// 아니라면 제출 이벤트를 막는다.
 let idveri = pwveri = pwchkveri = nameveri = bitrhveri = genderveri = phoneveri = addressveri = false;
+// 메일은 필수가 아니라 선택사항 이므로 true
 let mailveri = true;
 
 
 // 아이디
-// .userid input에 focusout 됐을 때 입력된 값의 길이가 0이라면(조건)
-// .userid warn에 내용을 작성(실행문)
+// .userid input에 focusout 됐을 때 
+// input value 값이 길이(length)가 0이라면(조건)
+// .userid warn에 text-red class '필수 정보입니다.'
+
+// else if(!정규식.test(userID)) 
+// .userid warn에 text-red class '5~8자의 영문 소문자, 숫자만 사용 가능합니다.'
+
+// else (0이 아니고, 정규식에 맞게 작성 했을 때)
+// idveri = true;
+// .userid warn에 text-green class '멋진 아이디네요!'
 $('.userid input').focusout(function(){
   let userId = $(this).val();
   // 최소 5글자 ~ 최대 8글자 사이 영문 소문자 + 숫자 포함
@@ -32,8 +45,19 @@ $('.userid input').focusout(function(){
 
 
 // 비밀번호
-// .userpw input에 focusout 됐을 때 입력된 값이 0이라면 (조건)
-// .userpw warn에 내용을 작성(실행문)
+// .userpw input에 focusout 됐을 때 
+// input value 값이 길이(length)가 0이라면(조건)
+// .userpw warn에 text-red class '필수 정보입니다.'
+
+// else if (!정규식.test(userPw))
+// .userpw warn에 text-red class '8~20자 영문 대 소문자, 숫자, 특수문자를 사용하세요.'
+// .userpw .inputbox p에 text-red class '사용불가' (.inputbox 우측 텍스트)
+// .userpw .inputbox img attr src 변경 - 10
+
+// else (0이 아니고, 정규식에 맞게 작성 했을 때)
+// pwveri = true;
+// .userpw .inputbox p에 text-green class '안전' (.inputbox 우측 텍스트)
+// .userpw .inputbox img attr src 변경 - 04
 $('.userpw input').focusout(function(){
   let userPw = $(this).val();
   // 8~20자 사이 영문 대소문자, 숫자, 특수문자 포함
@@ -87,14 +111,14 @@ $('.userpw-chk input').focusout(function(){
 
 
 // 이름
-// .username input에 focusout 됐을 때 입력된 값이 0이라면(조건)
-// .warn에 text-red 필수 정보 입니다.
-// else if
-// 정규식 한글 최소 2~5글자 (조건2)
-// .warn에 text-red 한글로 2~5글자 사이로 작성하세요.
-// else 
-// .warn에 들어있는 경고메세지를 지워준다. 
+// .username input에 focusout 됐을 때
+// input value 값이 0이라면(조건)
+// .warn에 text-red class '필수 정보 입니다.'
+// else if (정규식.test())
+// .warn에 text-red class '2~5글자 사이의 한글로 입력하세요.'
+// else (0이 아니고, 정규식에 맞게 잘 입력 했을 때)
 // nameveri = true;
+// .warn에 들어있는 경고메세지를 비운다. empty() 
 $('.username input').focusout(function(){
   let userName = $('.username input').val();
   let nameExp = /^[가-힣]{2,5}$/;
