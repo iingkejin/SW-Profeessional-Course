@@ -132,3 +132,59 @@ $('.username input').focusout(function(){
     $('.username .warn').empty();
   }
 })
+
+
+// 생년월일
+// #year, #month, #date에 focusout 됐을 때
+// #year의 value length가 4글자 아니라면(조건1)
+// .birth .warn에 text-red class 
+// '태어난 년도 4자리를 정확하게 입력하세요.'
+
+// #month의 length가 0이라면 (조건2)
+// .birth .warn text-red class 
+// '태어난 월을 선택하세요.'
+
+// #date의 length가 0이라면 (조건3)
+// .birth .warn text-red class 
+// '태어난 일(날짜) 2자리를 정확하게 입력하세요.'
+
+// 년,월,일 값이 숫자가 아니라면 (조건4)
+// .birth .warn text-red class 
+// '생년월일을 다시 확인해주세요.'
+
+// 올 해 기준으로 나이가 100 초과라면 (조건5)
+// .birth .warn text-red class 
+// '정말이세요?'
+$('#year, #month, #date').focusout(function(){
+  let year = $('#year').val();
+  let month = $('#month').val();
+  let date = $('#date').val();
+
+  // 한국 날짜 및 시간 (한국 표준시)
+  let now = new Date();
+  // Date 객체의 getTime() 메서드는
+  // 1970년 1월 1일 00시 00분 00초 (UTC) 
+  // 세계표준시를 기준으로 경과한 밀리초를 반환한다. 
+  let nowStamp = now.getTime();
+  // 현재 날짜 및 시간에서 현재 연도의 네자리 값을 변수에 할당
+  now = now.getFullYear();
+
+  // 사용자가 입력한 year, month, date 값으로 Date 객체 생성
+  let birth = new Date(year, month, date);
+  console.log(birth)
+  birth = birth.getTime();
+  console.log(birth)
+
+  if(year.length != 4) {
+    $('.birth .warn').html('<span class="text-red">태어난 년도 4자리를 정확하게 입력하세요.</span>')
+  } else if(month.length == 0) {
+    $('.birth .warn').html('<span class="text-red">태어난 월을 선택하세요.</span>')
+  } else if(date.length == 0) {
+    $('.birth .warn').html('<span class="text-red">태어난 일(날짜) 2자리를 정확하게 입력하세요.</span>')
+  } else if(isNaN(year * month * date)) {
+    // is Not a Number
+    $('.birth .warn').html('<span class="text-red">생년월일을 다시 확인 해주세요.</span>')
+  } else if(now - year > 100) {
+    $('.birth .warn').html('<span class="text-red">정말이세요?</span>')
+  }
+})
