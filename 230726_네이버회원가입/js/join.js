@@ -273,16 +273,54 @@ $('.phonenum input').focusout(function(){
   }
 }) 
 
-
-
 // #veribtn(인증번호 받기)를 클릭 했을 때
 // .phonenum input value에 숫자가 아닌 모든 문자를 제거하고,
 // 제거한 값을 변수에 담아서 input에 다시 넣어준다.
+$('#veribtn').on('click', function(){
+  let phoneVal = $('.phonenum input').val();
+  phoneVal = phoneVal.replace(/[^0-9]/g, '');
+  $('.phonenum input').val(phoneVal);
 
-// .phonenum input value length가 10~11 자리가 아니라면(조건1)
-// .phonenum input value 값이 숫자가 아닌 경우(조건2)
-// 변수 두 개 선언 후 1,2번 조건을 모두 충족할 때만 값을 true로 준다.
-// 10~11자리가 맞을 때 / 값이 숫자일 경우
+  // .phonenum input value length가 10~11 자리가 아니라면(조건1)
+  // .phonenum input value 값이 숫자가 아닌 경우(조건2)
+  // 변수 두 개 선언 후 1,2번 조건을 모두 충족할 때만 값을 true로 준다.
+  // 10~11자리가 맞을 때 / 값이 숫자일 경우
+  let phoneLeng;
+  if(phoneVal.length < 10 || phoneVal.length > 11) {
+    phoneLeng = false;
+  } else {
+    phoneLeng = true;
+  }
+
+  let phoneNum;
+  if(isNaN(phoneVal)) {
+    phoneNum = false;
+  } else {
+    phoneNum = true;
+  }
+
+  // phoneLeng, phoneNum 모두 true일 경우(조건)
+  // .phone .warn에 text-green class '인증번호를 발송했습니다~~~';
+  // #veritext에 disabled false
+  // .inputbox에 .disinput class remove
+
+  // else 
+  // .phone .warn에 text-red class '형식에 맞지 않는 번호입니다.'
+  // #veritext에 disabled true
+    // .inputbox에 .disinput class add
+  if(phoneLeng && phoneNum) {
+    $('.phone .warn').html('<span class="text-green">인증번호를 발송했습니다.(유효시간 30분)<br>인증번호가 오지 않으면 입력하신 정보가 정확한지 확인하여 주세요. 이미 가입된 번호거나, 가상전화번호는 인증번호를 받을 수 없습니다.</span>');
+    $('#veritext').attr('disabled', false);
+    $('#veritext').parent('.inputbox').removeClass('disinput');
+  } else {
+    $('.phone .warn').html('<span class="text-red">형식에 맞지 않는 번호입니다.</span>')
+    $('#veritext').attr('disabled', true);
+    $('#veritext').parent('.inputbox').addClass('disinput');
+  }
+})
+
+
+
 
 // 두 조건이 모두 true일 때
 // 인증번호 입력칸을 활성화 시킨다.
