@@ -9,3 +9,8 @@ document.querySelectorAll('input').forEach(function(input){
     this.parentNode.classList.remove('border-act');
   })
 })
+
+
+let idveri = pwveri = pwchkveri = nameveri = bitrhveri = genderveri = phoneveri = addressveri = false;
+let mailveri = true;
+
