@@ -101,6 +101,7 @@ document.querySelector('.username input').addEventListener('focusout', function(
 })
 
 
+// 생년월일
 let birthList = document.querySelectorAll('.birth-item');
 
 birthList.forEach(function(item){
