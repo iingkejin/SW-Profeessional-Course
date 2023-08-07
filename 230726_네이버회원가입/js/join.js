@@ -177,4 +177,46 @@ document.querySelector('.usermail input').addEventListener('focusout', function(
 })
 
 
+// 휴대전화
+let numWarn = document.querySelector('.phone .warn');
 
+document.querySelector('.phonenum input').addEventListener('focusout', function(){
+  let phoneNum = this.value;
+
+  if(phoneNum.length == 0) {
+    numWarn.innerHTML = essenInfo;
+  } else {
+    numWarn.innerHTML = '';
+  }
+})
+
+document.getElementById('veribtn').addEventListener('click', function(){
+  let phoneNum = document.querySelector('.phonenum input').value;
+  phoneNum = phoneNum.replace(/[^0-9]/g, '');
+  document.querySelector('.phonenum input').value = phoneNum;
+  let veriText = document.getElementById('veritext');
+
+  let phoneLeng;
+  if(phoneNum.length < 10 || phoneNum.length > 11) {
+    phoneLeng = false;
+  } else {
+    phoneLeng = true;
+  }
+
+  let phoneNaN;
+  if(isNaN(phoneNum)) {
+    phoneNaN = false;
+  } else {
+    phoneNaN = true;
+  }
+
+  if(phoneLeng && phoneNaN) {
+    numWarn.innerHTML = '<span class="text-green">인증번호가 발송되었습니다.</span>';
+    veriText.parentNode.classList.remove('disinput');
+    veriText.disabled = false;
+  } else {
+    numWarn.innerHTML = '<span class="text-red">형식에 맞지 않는 번호입니다.</span>'
+    veriText.parentNode.classList.add('disinput');
+    veriText.disabled = true;
+  }
+})
