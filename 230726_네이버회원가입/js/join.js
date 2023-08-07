@@ -100,3 +100,13 @@ document.querySelector('.username input').addEventListener('focusout', function(
   }
 })
 
+
+let birthList = document.querySelectorAll('.birth-item');
+
+birthList.forEach(function(item){
+  item.addEventListener('focusout', function(){
+    let year = birthList[0].value;
+    let month = birthList[1].value;
+    let date = birthList[2].value;
+  })
+})
