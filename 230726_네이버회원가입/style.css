@@ -41,7 +41,7 @@ section label {
 }
 
 label input[type='checkbox'] {
-  display: none;
+  /* display: none; */
 }
 
 .checkbox-img {
