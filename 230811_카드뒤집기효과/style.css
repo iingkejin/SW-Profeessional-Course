@@ -18,12 +18,15 @@
   width: 500px;
   height: 300px;
   cursor: pointer;
+  /* 원근법 : perspective 숫자가 커질수록 멀리서 보는 느낌*/
+  perspective: 800px;
 }
 
 .card-inner {
   position: relative;
   width: 100%;
   height: 100%;
+  transition: transform 1000ms;
   transform-style: preserve-3d;
 }
 
