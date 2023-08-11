@@ -31,6 +31,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   padding: 20px 30px;
@@ -53,11 +54,35 @@
 }
 
 .map-img {
-  width: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: .3;
+  z-index: -1;
+}
+
+.chip-img {
+  width: 60px;
 }
 
 .logo-img {
   width: 80px;
+}
+
+.card-num {
+  font-size: 35px;
+  margin-top: 60px;
+}
+
+.card-holder {
+  font-size: 12px;
+  margin-top: 40px;
+}
+
+.card-name {
+  font-size: 22px;
+  margin-top: 10px;
 }
 
 .card-cvv img {
