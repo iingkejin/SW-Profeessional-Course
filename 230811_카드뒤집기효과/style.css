@@ -1,4 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
   background-color: #000;
   color: #fff;
+}
+
+.card {
+  width: 500px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px;
+  background : linear-gradient(45deg, #0045c7, #ff2c7d);
+  border-radius: 15px;
+  /* 뒤집어진 뒷면을 보여줄지, 숨길지 결정
+    visible / hidden
+  */
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.map-img {
+  width: 150px;
+}
+
+.logo-img {
+  width: 80px;
+}
+
+.card-cvv img {
+  width: 100px;
 }
