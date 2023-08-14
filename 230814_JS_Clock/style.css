@@ -1,0 +1,9 @@
+@font-face {
+  font-family: Orbitron;
+  src : url('./fonts/Orbitron-Regular.eot');
+  src : url('./fonts/Orbitron-Regular.woff') format('woff');
+}
+
+body {
+ font-family: Orbitron, sans-serif; 
+}
