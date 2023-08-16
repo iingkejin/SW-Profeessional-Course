@@ -239,5 +239,27 @@ body {
 }
 
 /* .wrapper에 night class가 있을 때 화면 */
+.wrapper.night .logo {
+  background-image: url('./images/logo_w.png');
+}
 
+.wrapper.night .gnb-list li a {
+  color: #fff;
+}
 
+.wrapper.night .gnb-list li a::after {
+  border-bottom-color: #fff;
+}
+
+.wrapper.night .lorem-txt p,
+.wrapper.night .lorem-txt em {
+  color: #999;
+}
+
+.wrapper.night .lorem-txt strong {
+  color: #fff;
+}
+
+.wrapper.night .phone-time {
+  color: #fff;
+}
