@@ -27,6 +27,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100vh;
+  z-index: 1;
   background-repeat: no-repeat;
   background-position: center;
   background-size : cover;
@@ -54,6 +55,7 @@ body {
   position: absolute;
   top: 45px;
   left: 15px;
+  z-index: -1;
   width: 800px;
   opacity: 0.8;
 }
@@ -62,6 +64,7 @@ body {
   position: absolute;
   top: 20px;
   left: 0;
+  z-index: -1;
   width: 1000px;
   opacity: 0.6;
 }
@@ -110,4 +113,53 @@ body {
 
 .gnb-list li a:hover::after {
   transform: scaleX(1);
+}
+
+.lorem-txt {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+}
+
+.lorem-txt p {
+  font-size: 48px;
+  color: #666;
+}
+
+.lorem-txt p strong {
+  color: #333;
+}
+
+.lorem-txt em {
+  font-size: 14px;
+  color: #666;
+}
+
+#phone {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 660px;
+  height: 620px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
+
+/* phone background-image 변경 */
+.wrapper.morning #phone {
+  background-image: url('./images/phone_morning.png');
+}
+
+.wrapper.afternoon #phone {
+  background-image: url('./images/phone_afternoon.png');
+}
+
+.wrapper.evening #phone {
+  background-image: url('./images/phone_evening.png');
+}
+
+.wrapper.night #phone {
+  background-image: url('./images/phone_night.png');
 }
