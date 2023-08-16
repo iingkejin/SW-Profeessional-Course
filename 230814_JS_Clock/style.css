@@ -4,6 +4,47 @@
   src : url('./fonts/Orbitron-Regular.woff') format('woff');
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+}
+
 body {
  font-family: Orbitron, sans-serif; 
+}
+
+.wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size : cover;
+}
+
+/* 전체화면 배경 class */
+.wrapper.morning {
+  background-image: url('./images/bg_morning.jpg');
+}
+
+.wrapper.afternoon {
+  background-image: url('./images/bg_afternoon.jpg');
+}
+
+.wrapper.evening {
+  background-image: url('./images/bg_evening.jpg');
+}
+
+.wrapper.night {
+  background-image: url('./images/bg_night.jpg');
 }
