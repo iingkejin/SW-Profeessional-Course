@@ -48,3 +48,34 @@ body {
 .wrapper.night {
   background-image: url('./images/bg_night.jpg');
 }
+
+/* 전체화면 구름 1,2 */
+.wrapper > img:nth-child(1) {
+  position: absolute;
+  top: 45px;
+  left: 15px;
+  width: 800px;
+  opacity: 0.8;
+}
+
+.wrapper > img:nth-child(2) {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 1000px;
+  opacity: 0.6;
+}
+
+.global-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 90px;
+  height: 80px;
+  background-image: url('./images/logo_b.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
