@@ -69,6 +69,8 @@ body {
 .global-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
 }
 
 .logo {
@@ -78,4 +80,34 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.gnb-list {
+  display: flex;
+}
+
+.gnb-list li {
+  margin-right: 30px;
+}
+
+.gnb-list li:last-child {
+  margin-right: 0;
+}
+
+.gnb-list li a {
+  font-weight: 700;
+}
+
+.gnb-list li a::after {
+  content: '';
+  display: block;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #444;
+  /* 중심점이 가상 요소의 가운데로 설정 */
+  transform: scaleX(0);
+  transition: transform 500ms;
+}
+
+.gnb-list li a:hover::after {
+  transform: scaleX(1);
 }
