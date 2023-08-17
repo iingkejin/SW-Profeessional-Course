@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object & Array</title>
+</head>
+<body>
+  <h1 class="com"></h1>
+  <script>
+    // let computer = '삼성';
+    // document.querySelector('.com').innerHTML = computer;
+    // let name = '이예진';
+
+    // Array [대괄호]
+    // 값들을 comma(,)로 구분해서 엑셀처럼 저장할 수 있는 자료형
+    let computer = ['삼성', 'LG', 'APLLE', 'DELL'];
+    console.log(computer);
+    document.querySelector('.com').innerHTML = computer[1];
+    computer[0] = 'SAMSUNG';
+    computer[3] = 'SAMBO';
+    // console.log(computer);
+
+    // Object {중괄호}
+    // {key : value}
+    let sw = {
+      computer : '삼성',
+      name : 'yejin'
+    }
+    console.log(sw);
+
+    // 1. object.['내가 가져오고 싶은 value의 key값']
+    // console.log(sw['computer']);
+    // console.log(sw['name']);
+
+    // 2. object.해당 value의 key값
+    // console.log(sw.computer);
+    // console.log(sw.name);
+
+    // array / object의 차이점
+    // array는 순서대로 자료를 저장
+    // object는 자료에 이름(key)을 붙여서 저장
+    // array는 자료간 순서가 존재, object 순서 개념 존재 X
+    // array는 자료간 정렬 / 자르기 기능 할 수 있다.
+  </script>
+</body>
+</html>
