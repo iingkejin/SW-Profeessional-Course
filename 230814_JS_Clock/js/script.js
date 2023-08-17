@@ -73,7 +73,6 @@ if(hr >= 6 && hr < 12) {
 btnList.forEach(function(item){
   // 각 li a 태그의 html text를 backTxt 변수에 저장
   let backTxt = item.querySelector('a').innerHTML;
-  let backWrap = document.getElementById('back-wrap');
   
   // 각 버튼에 클릭 이벤트 추가
   item.addEventListener('click', function(e){
