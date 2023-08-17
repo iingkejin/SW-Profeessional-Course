@@ -23,12 +23,13 @@
 
     // Object {중괄호}
     // {key : value}
+    // object 안에는 array도 들어갈 수 있다.
     let sw = {
-      computer : '삼성',
-      name : 'yejin'
+      computer : ['삼성', 'LG', 'APPLE', 'DELL'],
+      name : ['한나', '서우', '지은', '예진']
     }
 
-    document.querySelector('.com').innerHTML = '내 컴퓨터는 ' + sw.computer + '이고, 내 이름은 ' + sw.name + '이야';
+    document.querySelector('.com').innerHTML = '내 컴퓨터는 ' + sw.computer[2] + '이고, 내 이름은 ' + sw.name[3] + '이야';
     // console.log(sw);
 
     // 1. object.['내가 가져오고 싶은 value의 key값']
