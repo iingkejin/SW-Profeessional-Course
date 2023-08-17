@@ -23,7 +23,7 @@ body {
  font-family: Orbitron, sans-serif; 
 }
 
-.wrapper {
+#wrapper {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -34,24 +34,24 @@ body {
 }
 
 /* 전체화면 배경 class */
-.wrapper.morning {
+#wrapper.morning {
   background-image: url('./images/bg_morning.jpg');
 }
 
-.wrapper.afternoon {
+#wrapper.afternoon {
   background-image: url('./images/bg_afternoon.jpg');
 }
 
-.wrapper.evening {
+#wrapper.evening {
   background-image: url('./images/bg_evening.jpg');
 }
 
-.wrapper.night {
+#wrapper.night {
   background-image: url('./images/bg_night.jpg');
 }
 
 /* 전체화면 구름 1,2 */
-.wrapper > img:nth-child(1) {
+#wrapper > img:nth-child(1) {
   position: absolute;
   top: 45px;
   left: 15px;
@@ -64,7 +64,7 @@ body {
   animation-iteration-count: infinite;
 }
 
-.wrapper > img:nth-child(2) {
+#wrapper > img:nth-child(2) {
   position: absolute;
   top: 20px;
   left: 0;
@@ -154,19 +154,19 @@ body {
 }
 
 /* phone background-image 변경 */
-.wrapper.morning #phone {
+#wrapper.morning #phone {
   background-image: url('./images/phone_morning.png');
 }
 
-.wrapper.afternoon #phone {
+#wrapper.afternoon #phone {
   background-image: url('./images/phone_afternoon.png');
 }
 
-.wrapper.evening #phone {
+#wrapper.evening #phone {
   background-image: url('./images/phone_evening.png');
 }
 
-.wrapper.night #phone {
+#wrapper.night #phone {
   background-image: url('./images/phone_night.png');
 }
 
@@ -247,29 +247,29 @@ body {
   background-color: #111;
 }
 
-/* .wrapper에 night class가 있을 때 화면 */
-.wrapper.night .logo {
+/* #wrapper에 night class가 있을 때 화면 */
+#wrapper.night .logo {
   background-image: url('./images/logo_w.png');
 }
 
-.wrapper.night .gnb-list li a {
+#wrapper.night .gnb-list li a {
   color: #fff;
 }
 
-.wrapper.night .gnb-list li a::after {
+#wrapper.night .gnb-list li a::after {
   border-bottom-color: #fff;
 }
 
-.wrapper.night .lorem-txt p,
-.wrapper.night .lorem-txt em {
+#wrapper.night .lorem-txt p,
+#wrapper.night .lorem-txt em {
   color: #999;
 }
 
-.wrapper.night .lorem-txt strong {
+#wrapper.night .lorem-txt strong {
   color: #fff;
 }
 
-.wrapper.night .phone-time {
+#wrapper.night .phone-time {
   color: #fff;
 }
 
