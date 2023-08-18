@@ -34,3 +34,10 @@ boxItems.forEach(function(item, index){
   item.querySelectorAll('.sho-info p')[1].innerHTML = products[index].size;
 })
 
+// 프론트엔드 개발자가 하는 역할
+// 서버가 보낸 데이터를 html에 꽂아준다
+// 전문 용어로 '데이터 바인딩'이라고 한다.
+// 데이터 바인딩을 쉽고 편하게 할 수 있도록
+// 도와주는 도구 (React, Vue, angular)
+// 시작 기호가 대괄호[], 중괄호{}냐에 따라서
+// Array, object 구분
