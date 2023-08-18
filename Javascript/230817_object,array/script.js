@@ -5,12 +5,23 @@ let products = [
     title : '나이키 테크 헤라',
     price : '103,200 원',
     size : ['230', '235', '240', '245']
-  }
+  },
+  {
+    img : 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/af53d53d-561f-450a-a483-70a7ceee380f/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-ZuZyA5Sj.png',
+    title : '나이키 덩크 로우',
+    price : '139,000 원',
+    size : ['220', '230', '240', '250']
+  },
+  {
+    img : 'https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/d062f057-ab59-4723-acef-e59176868673/%EC%9A%B0%EB%A8%BC%EC%8A%A4-%EC%BD%94%EB%A5%B4%ED%85%8C%EC%A6%88-midnight-navy-dz2795-400-%EC%B6%9C%EC%8B%9C%EC%9D%BC.jpg',
+    title : '우먼스 코르테즈 Midnight Navy',
+    price : '119,000 원',
+    size : ['225', '230', '235', '240', '245']
+  },
 ]
 
-
-document.querySelector('.box-item img').src = products[0].img;
-document.querySelector('.sho-info h2').innerHTML = products[0].title;
-document.querySelectorAll('.sho-info p')[0].innerHTML = products[0].price;
-document.querySelectorAll('.sho-info p')[1].innerHTML = products[0].size;
+// document.querySelector('.box-item img').src = products[0].img;
+// document.querySelector('.sho-info h2').innerHTML = products[0].title;
+// document.querySelectorAll('.sho-info p')[0].innerHTML = products[0].price;
+// document.querySelectorAll('.sho-info p')[1].innerHTML = products[0].size;
 
