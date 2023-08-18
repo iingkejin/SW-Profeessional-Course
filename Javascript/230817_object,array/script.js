@@ -25,3 +25,12 @@ let products = [
 // document.querySelectorAll('.sho-info p')[0].innerHTML = products[0].price;
 // document.querySelectorAll('.sho-info p')[1].innerHTML = products[0].size;
 
+let boxItems = document.querySelectorAll('.box-item');
+
+boxItems.forEach(function(item, index){
+  item.querySelector('img').src = products[index].img;
+  item.querySelector('.sho-info h2').innerHTML = products[index].title;
+  item.querySelectorAll('.sho-info p')[0].innerHTML = products[index].price;
+  item.querySelectorAll('.sho-info p')[1].innerHTML = products[index].size;
+})
+
