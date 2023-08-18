@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  padding: 50px;
+}
+
+.box-list {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.box-item {
+  width: calc((100% - 30px) / 3);
+  border: 1px solid #888;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.box-item img {
+  width: 100%;
+}
+
+.sho-info {
+  padding: 20px;
+}
+
+.sho-info p {
+  margin-top: 10px;
+}
