@@ -10,16 +10,15 @@
 
 .box-list {
   display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .box-item {
-  width: calc((100% - 30px) / 3);
+  width: calc((100% - 60px) / 3);
   border: 1px solid #888;
   border-radius: 10px;
   overflow: hidden;
+  margin: 10px;
 }
 
 .box-item img {
