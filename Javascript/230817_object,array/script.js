@@ -25,14 +25,14 @@ let products = [
 // document.querySelectorAll('.sho-info p')[0].innerHTML = products[0].price;
 // document.querySelectorAll('.sho-info p')[1].innerHTML = products[0].size;
 
-let boxItems = document.querySelectorAll('.box-item');
+// let boxItems = document.querySelectorAll('.box-item');
 
-boxItems.forEach(function(item, index){
-  item.querySelector('img').src = products[index].img;
-  item.querySelector('.sho-info h2').innerHTML = products[index].title;
-  item.querySelectorAll('.sho-info p')[0].innerHTML = products[index].price;
-  item.querySelectorAll('.sho-info p')[1].innerHTML = products[index].size;
-})
+// boxItems.forEach(function(item, index){
+//   item.querySelector('img').src = products[index].img;
+//   item.querySelector('.sho-info h2').innerHTML = products[index].title;
+//   item.querySelectorAll('.sho-info p')[0].innerHTML = products[index].price;
+//   item.querySelectorAll('.sho-info p')[1].innerHTML = products[index].size;
+// })
 
 // 프론트엔드 개발자가 하는 역할
 // 서버가 보낸 데이터를 html에 꽂아준다
@@ -45,12 +45,27 @@ boxItems.forEach(function(item, index){
 
 // Javascript로 html 요소 생성
 // createElement('태그이름')
-let h1Tag = document.createElement('h1');
-h1Tag.innerHTML = '안녕하세요!';
-h1Tag.classList.add('hi');
-document.querySelector('.box-list').appendChild(h1Tag);
+// let h1Tag = document.createElement('h1');
+// h1Tag.innerHTML = '안녕하세요!';
+// h1Tag.classList.add('hi');
+// document.querySelector('.box-list').appendChild(h1Tag);
 
 // .box-list안에 p태그로 생성
-let pTag = document.createElement('p');
-pTag.innerHTML = 'createElement로 p 태그 생성';
-document.querySelector('.box-list').appendChild(pTag);
+// let pTag = document.createElement('p');
+// pTag.innerHTML = 'createElement로 p 태그 생성';
+// document.querySelector('.box-list').appendChild(pTag);
+
+
+// products length만큼 createElement로 html 생성
+// .box-list 안에 .box-item이라는 class를 가진 div 생성
+// .box-item 안 
+// 1. img tag 생성 src = products.img / alt = products.title
+// 2. .box-list 안에 .sho-info라는 class를 가진 div 생성
+// 3. .sho-info 안에 h2 tag 생성 => innerHTML = products.title
+// 4. .sho-info 안에 p tag 생성 => innerHTML = products.price
+// 5. .sho-info 안에 p tag 생성 => innerHTML = products.size
+ 
+
+products.forEach(function(){
+
+})
