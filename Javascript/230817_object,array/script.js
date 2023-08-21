@@ -98,29 +98,40 @@ let products = [
 
 let boxList = document.querySelector('.box-list');
 
-products.forEach(function(item){
-  let boxItem = document.createElement('div');
-  boxItem.classList.add('box-item');
-  boxList.appendChild(boxItem);
+// products.forEach(function(item){
+//   let boxItem = document.createElement('div');
+//   boxItem.classList.add('box-item');
+//   boxList.appendChild(boxItem);
 
-  let boxImg = document.createElement('img');
-  boxImg.src = item.img;
-  boxImg.alt = item.title;
-  boxItem.appendChild(boxImg);
+//   let boxImg = document.createElement('img');
+//   boxImg.src = item.img;
+//   boxImg.alt = item.title;
+//   boxItem.appendChild(boxImg);
 
-  let shoInfo = document.createElement('div');
-  shoInfo.classList.add('sho-info');
-  boxItem.appendChild(shoInfo);
+//   let shoInfo = document.createElement('div');
+//   shoInfo.classList.add('sho-info');
+//   boxItem.appendChild(shoInfo);
 
-  let boxTitle = document.createElement('h2');
-  boxTitle.innerHTML = item.title;
-  shoInfo.appendChild(boxTitle);
+//   let boxTitle = document.createElement('h2');
+//   boxTitle.innerHTML = item.title;
+//   shoInfo.appendChild(boxTitle);
 
-  let boxPrice = document.createElement('p');
-  boxPrice.innerHTML = item.price;
-  shoInfo.appendChild(boxPrice);
+//   let boxPrice = document.createElement('p');
+//   boxPrice.innerHTML = item.price;
+//   shoInfo.appendChild(boxPrice);
 
-  let boxSize = document.createElement('p');
-  boxSize.innerHTML = item.size;
-  shoInfo.appendChild(boxSize);
-})
+//   let boxSize = document.createElement('p');
+//   boxSize.innerHTML = item.size;
+//   shoInfo.appendChild(boxSize);
+// })
+
+
+// Javascript로 html 생성하는 방법2 (최신문법)
+// let pTag = '<p class="txt">html 생성~~</p>';
+// // .insertAdjacentHTML(위치, 문자) => 문자형 html을 넣어주는 함수
+// // 첫번째 파라미터 : 추가 할 위치(beforeend = 안쪽 맨 밑)
+// // 두번째 파라미터 : 추가 할 html 문자(pTag)
+// document.querySelector('.box-list').insertAdjacentHTML('beforeend', pTag);
+
+
+// insertAdjacentHTML로 .box-item 완성
