@@ -57,15 +57,44 @@ let products = [
 
 
 // products length만큼 createElement로 html 생성
+
 // .box-list 안에 .box-item이라는 class를 가진 div 생성
+
 // .box-item 안 
-// 1. img tag 생성 src = products.img / alt = products.title
+// 1. img 생성 src = products.img / alt = products.title
 // 2. .box-list 안에 .sho-info라는 class를 가진 div 생성
-// 3. .sho-info 안에 h2 tag 생성 => innerHTML = products.title
-// 4. .sho-info 안에 p tag 생성 => innerHTML = products.price
-// 5. .sho-info 안에 p tag 생성 => innerHTML = products.size
- 
+// 3. .sho-info 안에 h2 생성 => innerHTML = products.title
+// 4. .sho-info 안에 p[0] 생성 => innerHTML = products.price
+// 5. .sho-info 안에 p[1] 생성 => innerHTML = products.size
 
-products.forEach(function(){
+/* 
+<div class="box-item">
+  <img src="" alt="">
+  <div class="sho-info">
+    <h2></h2>
+    <p></p>
+    <p></p>
+  </div>
+</div> 
+*/
 
+let boxList = document.querySelector('.box-list');
+
+products.forEach(function(item){
+  let boxItem = document.createElement('div');
+  boxItem.classList.add('box-item');
+  boxList.appendChild(boxItem);
+
+  let boxImg = document.createElement('img');
+  boxImg.src = item.img;
+  boxImg.alt = item.title;
+  boxItem.appendChild(boxImg);
+
+  let shoInfo = document.createElement('div');
+  shoInfo.classList.add('sho-info');
+  boxItem.appendChild(shoInfo);
+
+  let boxTitle = document.createElement('h2');
+  boxTitle.innerHTML = item.title;
+  shoInfo.appendChild(boxTitle);
 })
