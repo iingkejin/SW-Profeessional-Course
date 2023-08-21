@@ -18,6 +18,24 @@ let products = [
     price : '119,000 원',
     size : ['225', '230', '235', '240', '245']
   },
+  {
+    img : 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/efa22a9e-4f74-43d9-abbb-e097534464ac/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EB%A1%9C%EC%9A%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-FBbeey7u.png',
+    title : '에어 조던 1 로우',
+    price : '111,200 원',
+    size : ['220', '225', '230', '235']
+  },  
+  {
+    img : 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d83976d3-0d8b-4d00-9583-0b67c817e4ba/%EA%B0%90%EB%A7%88-%ED%8F%AC%EC%8A%A4-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-rrYHU8nT.png',
+    title : '나이키 감마 포스',
+    price : '95,200 원',
+    size : ['220', '225', '230', '235']
+  },
+  {
+    img : 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c969959e-1f05-49b2-be11-14881fd373f2/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%EC%97%98%EB%A6%AC%EB%B2%A0%EC%9D%B4%ED%8A%B8-%EB%A1%9C%EC%9A%B0-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-fMD68li7.png',
+    title : '에어 조던 1 엘리베이트 로우',
+    price : '152,100 원',
+    size : ['230', '240', '250', '260']
+  },
 ]
 
 // document.querySelector('.box-item img').src = products[0].img;
@@ -64,8 +82,8 @@ let products = [
 // 1. img 생성 src = products.img / alt = products.title
 // 2. .box-list 안에 .sho-info라는 class를 가진 div 생성
 // 3. .sho-info 안에 h2 생성 => innerHTML = products.title
-// 4. .sho-info 안에 p[0] 생성 => innerHTML = products.price
-// 5. .sho-info 안에 p[1] 생성 => innerHTML = products.size
+// 4. .sho-info 안에 p 생성 => innerHTML = products.price
+// 5. .sho-info 안에 p 생성 => innerHTML = products.size
 
 /* 
 <div class="box-item">
@@ -97,4 +115,12 @@ products.forEach(function(item){
   let boxTitle = document.createElement('h2');
   boxTitle.innerHTML = item.title;
   shoInfo.appendChild(boxTitle);
+
+  let boxPrice = document.createElement('p');
+  boxPrice.innerHTML = item.price;
+  shoInfo.appendChild(boxPrice);
+
+  let boxSize = document.createElement('p');
+  boxSize.innerHTML = item.size;
+  shoInfo.appendChild(boxSize);
 })
