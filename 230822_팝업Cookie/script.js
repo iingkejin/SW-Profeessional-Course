@@ -44,5 +44,31 @@ function setCookie(name, value, hours){
     // 쿠키 만료시간을 표준화된 방식으로 변환
     expires = '; expires' + date.toUTCString();
   }
-  
+
+  // '; path=/경로' : 쿠키가 어떤 경로에서 유효하게 할건지 경로 설정
+  // 경로를 설정할 때 /(slash)만 사용하면 현재 도메인의 모든 경로에서 쿠키가 유효하다
+  // /shopping 으로 작성 할 경우 해당 경로에서만 쿠키 유효
+  document.cookie = name + '=' + (value || '') + expires + '; path=/';
 }
+
+// 특정 이름의 쿠기 값을 가져오는 함수
+function getCookie(name){
+  // name Equal
+  // 쿠키의 이름 = 값 사이에 Equal(=) 들어간다.
+  // name = value
+  // 쿠키이름 = 쿠키의 이름과 일치하는 문자열인지 확인
+  let nameEqu = name + '=';
+
+  // 쿠키의 네임과 벨류값은 세미콜론 구분된다.
+  // 현재 페이지의 쿠키 문자열을 ;(세미콜론)을 기준으로 
+  // 값을 쪼개서 배열로 만들어준다.
+  let cookies = document.cookie.split(';');
+
+  // cookies 라는 배열을 순회하면서 쿠키값을 찾는다.
+  for(let i = 0; i < cookies.length; i++) {
+    // 현재 순회중인 쿠키 문자열을 cookie 변수 담는다.
+    let cookie = cookies[i];
+
+  }
+}
+
