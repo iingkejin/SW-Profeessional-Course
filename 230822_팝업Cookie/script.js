@@ -69,6 +69,17 @@ function getCookie(name){
     // 현재 순회중인 쿠키 문자열을 cookie 변수 담는다.
     let cookie = cookies[i];
 
+    // 쿠키 문자열에서 특정 이름과 일치하는 쿠키 값이 있는지 확인
+    // indexOf : 문자열 내에서 특정 문자열을 찾는 method
+    // nameEqu 변수가 쿠키 문자열의 0번째 위치에서 시작되는지를 확인 => True
+    // substring() : 문자열의 시작 index와 마지막 index를 지정해서 
+    // 해당 범위 내의 문자들을 추출
+    if(cookie.indexOf(nameEqu) == 0) {
+      return cookie.substring(nameEqu.length , cookie.length);
+    }
   }
+  // 일치하는 쿠키를 찾지 못했을 때, null 값을 반환해서
+  // 쿠키가 존재하지 않다는 것을 나타낸다.
+  return null;
 }
 
