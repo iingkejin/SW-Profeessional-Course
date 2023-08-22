@@ -83,3 +83,29 @@ function getCookie(name){
   return null;
 }
 
+
+// 문서가 로드될 때 실행될 함수 설정
+document.addEventListener('DOMContentLoaded', function(){
+  let popup = document.querySelector('.popup');
+  let nonePopup = document.getElementById('none-popup');
+  let closeBtn = document.getElementById('close-btn');
+  
+  // getCookie에서 hidePopup이라는 값을 가져왔을 때 null이 아니라면
+  if(getCookie("hidePopup")) {
+    popup.style.display = 'none';
+  }
+
+  closeBtn.addEventListener('click', function(){
+    popup.style.display = 'none';
+
+    // 체크박스에 checked 속성이 있다면
+    // setCookie 함수에 name, value, hours
+    // 매개변수 값을 전달해서 hours 시간 동안 팝업이 보이지 않게 한다.
+    
+    // closeBtn 클릭 했을 때 nonePopup에 checked 속성이 있다면 setCookie라는 함수에 name, value, hours 라는
+    // 매개변수 값 세 개를 넘겨준다.
+    if(nonePopup.checked) {
+      setCookie("hidePopup", "true", 24); // 쿠키를 24시간 동안 유지
+    }
+  })
+})
