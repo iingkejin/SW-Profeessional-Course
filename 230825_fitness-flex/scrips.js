@@ -13,15 +13,15 @@ let workout = [
   }
 ]
 
-workout.forEach((item, i) => {
+workout.forEach((item) => {
   let cardItem = `
     <div class="card-item">
-      <h2>${workout[i].title}</h2>
+      <h2>${item.title}</h2>
       <div class="caption">
         <p>Strength does not come from the physical capacity. It comes from an indomitable will. Know more</p>
         <button type="button">Know more</button>
       </div>
-      <img src="${workout[i].img}" alt="${workout[i].title} 이미지">
+      <img src="${item.img}" alt="${item.title} 이미지">
     </div>
   `
 
