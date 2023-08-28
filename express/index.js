@@ -57,3 +57,19 @@ app.get('/test', function(requests, response){
 })
 
 
+// 서버 종료 => ctrl + c
+// 서버 재실행 자동화
+// -g(global)로 컴퓨터 전역에서 이용 가능하게 설치
+// npm install -g nodemon
+// node index.js => nodemon index.js
+
+// powershell 보안 오류
+// powershell(관리자 권한으로 실행)
+// executionpolicy
+// set-executionpolicy unrestricted => enter
+// y => enter
+
+// /login 경로로 접속 했을 때 login.html 파일이 보이게 작성
+app.get('/login', function(requests, response){
+  response.sendFile(__dirname + '/login.html')
+})
