@@ -1,3 +1,21 @@
+// 서버 : 요청한 정보를 보내주는 프로그램
+// HTTP 요청 방식 네가지
+// 1. GET(읽기)
+// 2. POST(쓰기)
+// 3. PUT(수정)
+// 4. DELETE(삭제)
+
+
+// Node.js
+// Javascript runtime
+// Javascript는 프로그래밍적 연산을 하기 위한 언어가 아니고, HTML을 조작하기 위해 만들어진 언어
+// Javascript 언어는 브라우저가 해석한다. (크롬, 사파리, 엣지, 파이어폭스 등)
+// 크롬 브라우저에 V8 엔진에서 브라우저 환경 외에 다른 환경에서도 사용할 수 있도록 Node.js를 만들었다.
+
+// Node.js 장단점
+// 장점 : 가벼운 요청부터 먼저 처리
+// 단점 : 이미지, 동영상, 연산처리가 필요한 서비스를 개발해야 될 경우, 속도도 떨어지고, 라이브러리도 부족하다.
+
 // Express 라이브러리 사용해서 서버 구축
 // 폴더 생성 -> cd로 해당 폴더로 경로 이동
 // cd, cd .., ls
@@ -25,21 +43,17 @@ app.listen(7000, function(){
 })
 
 
-// 서버 : 요청한 정보를 보내주는 프로그램
-// HTTP 요청 방식 네가지
-// 1. GET(읽기)
-// 2. POST(쓰기)
-// 3. PUT(수정)
-// 4. DELETE(삭제)
+// 서버에 GET 요청으로 정보 받아오기
+// 유저가 localhost:7000으로 접속하면 send, sendFile() 안 내용을 보여준다.
+// app.get('경로', function(){})
+// requests(요청), response(응답)
+// slash / 는 메인 경로 (localhost:7000)
+app.get('/', function(requests, response){
+  response.sendFile(__dirname + '/index.html');
+})
 
+app.get('/test', function(requests, response){
+  response.send('Test 페이지 입니다.')
+})
 
-// Node.js
-// Javascript runtime
-// Javascript는 프로그래밍적 연산을 하기 위한 언어가 아니고, HTML을 조작하기 위해 만들어진 언어
-// Javascript 언어는 브라우저가 해석한다. (크롬, 사파리, 엣지, 파이어폭스 등)
-// 크롬 브라우저에 V8 엔진에서 브라우저 환경 외에 다른 환경에서도 사용할 수 있도록 Node.js를 만들었다.
-
-// Node.js 장단점
-// 장점 : 가벼운 요청부터 먼저 처리
-// 단점 : 이미지, 동영상, 연산처리가 필요한 서비스를 개발해야 될 경우, 속도도 떨어지고, 라이브러리도 부족하다.
 
