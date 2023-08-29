@@ -51,6 +51,10 @@ app.listen(7000, function(){
 })
 
 
+// 폴더 내 모든 정적 파일 제공(js, css, image, fonts)
+app.use(express.static(__dirname))
+
+
 // 서버에 GET 요청하기
 // localhost:7000으로 접속하면 send, sendFile() 안 내용을 보여준다.
 // app.get('경로', function(){})
@@ -92,3 +96,5 @@ app.get('/login', function(requests, response){
 app.get('/map', function(requests, response){
   response.sendFile(__dirname + '/map.html')
 })
+
+
