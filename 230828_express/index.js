@@ -98,3 +98,20 @@ app.get('/map', function(requests, response){
 })
 
 
+// POST
+// body-parser : 요청 데이터 해석을 도와주는 라이브러리
+// npm install body-perser
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended : true}));
+
+// input 태그 값을 서버에 전송하려면 name 속성 추가
+
+// app.post('', fucntion(){})
+// input에 작성된 내용은 requests 파라미터가 가지고 있다.
+app.post('/add', function(requests, response){
+  response.send('전송완료!')
+  console.log(requests.body)
+})
+
+// 서버한테 정보를 보내주는 코드
+// 서버에 보낸 정보를 영구 저장 하려면 DB(Data Base)에 저장
