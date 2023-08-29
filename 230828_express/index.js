@@ -100,14 +100,17 @@ app.get('/map', function(requests, response){
 
 // POST
 // body-parser : 요청 데이터 해석을 도와주는 라이브러리
+// body-parser 라이브러리 설치
 // npm install body-perser
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended : true}));
 
 // input 값을 서버에 전송하려면 input 태그에 name="" 속성 추가
+// name="id", name="pw"
 
 // app.post('경로', fucntion(){})
 // input에 작성된 내용은 requests 파라미터가 가지고 있다.
+// '/add'경로 => form 태그 action="/add" (add 경로로 post 요청)
 app.post('/add', function(requests, response){
   response.send('전송완료!')
   console.log(requests.body)
@@ -118,9 +121,9 @@ app.post('/add', function(requests, response){
 
 
 // url 이름짓기
-// 1. URL 명사로 작성 추천 /명사
+// 1. URL 명사로 작성 추천 '/명사'
 // 2. 하위 문서를 나타낼 때 / slash (하위폴더 나누듯이 사용)
 // 3. 파일 확장자 사용 X (.html, .css 등)
 // 4. 띄어쓰기 대신 (-) 사용
-// 5. 자료 하나당 하나의 URL을 사용
+// 5. 자료 하나당 하나의 URL 사용
 // 6. URL을 봤을 때 어떤 페이지인지 알 수 있어야 한다.
