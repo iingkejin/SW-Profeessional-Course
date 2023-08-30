@@ -4,10 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <h1>DB에서 받아온 데이터</h1>
-  <h3>ID : <%= log[0] %></h3>
-  <h3>PW : </h3>
+  <% for(let i = 0; i < log.length; i++) { %>
+    <div class="info-box">
+      <h3>ID : <%= log[i].아이디 %></h3>
+      <h3>PW : <%= log[i].비밀번호 %></h3>
+    </div>
+  <% } %>
 </body>
 </html>
