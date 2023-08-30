@@ -127,3 +127,25 @@ app.post('/add', function(requests, response){
 // 4. 띄어쓰기 대신 (-) 사용
 // 5. 자료 하나당 하나의 URL 사용
 // 6. URL을 봤을 때 어떤 페이지인지 알 수 있어야 한다.
+
+// MongoDB
+// npm install mongodb@3.6.4
+const MongoClient = require('mongodb').MongoClient;
+
+// 데이터를 저장할 변수 하나 선언
+let db;
+
+// Database access에서 만든 아이디 : 비밀번호
+MongoClient.connect('mongodb+srv://admin:wmfdlekt12@test.tithxy6.mongodb.net/?retryWrites=true&w=majority’', function(error, client){
+  // 커넥션 에러의 99.9%가 url 오타
+  if(error) {
+    return console.log(error)
+  }
+
+  db = client.db('data');
+  app.listen('7070', function(){
+    console.log('seccess')
+  })
+
+})
+
