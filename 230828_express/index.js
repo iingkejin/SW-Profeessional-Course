@@ -111,10 +111,10 @@ app.use(bodyParser.urlencoded({extended : true}));
 // app.post('경로', fucntion(){})
 // input에 작성된 내용은 requests 파라미터가 가지고 있다.
 // '/add'경로 => form 태그 action="/add" (add 경로로 post 요청)
-app.post('/add', function(requests, response){
-  response.send('전송완료!')
-  console.log(requests.body)
-})
+// app.post('/add', function(requests, response){
+//   response.send('전송완료!')
+//   console.log(requests.body)
+// })
 
 // 서버한테 정보를 보내주는 코드
 // 서버에 보낸 정보를 영구 저장 하려면 DB(Data Base)에 저장
@@ -136,7 +136,7 @@ const MongoClient = require('mongodb').MongoClient;
 let db;
 
 // Database access에서 만든 아이디 : 비밀번호
-MongoClient.connect('mongodb+srv://admin:wmfdlekt12@test.tithxy6.mongodb.net/?retryWrites=true&w=majority’', function(error, client){
+MongoClient.connect('mongodb+srv://admin:wmfdlekt12@data.pvgodwt.mongodb.net/?retryWrites=true&w=majority', function(error, client){
   // 커넥션 에러의 99.9%가 url 오타
   if(error) {
     return console.log(error)
@@ -144,8 +144,16 @@ MongoClient.connect('mongodb+srv://admin:wmfdlekt12@test.tithxy6.mongodb.net/?re
 
   db = client.db('data');
   app.listen('7070', function(){
-    console.log('seccess')
+    console.log('dsgdsgdsg')
   })
-
 })
 
+
+app.post('/add', function(requests, response){
+  console.log(requests.body)
+  response.send('전송 완료!')
+
+  db.collection('post').insertOne({아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error, result){
+    console.log('db에 저장완료!')
+  })
+})
