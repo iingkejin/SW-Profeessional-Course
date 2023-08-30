@@ -1,7 +1,13 @@
-body {
-  background-image: url('./images/2.jpg');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  color: red;
+.info-box {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 20px;
 }
