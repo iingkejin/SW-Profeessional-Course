@@ -153,19 +153,27 @@ app.post('/add', function(requests, response){
   console.log(requests.body)
   response.send('전송 완료!')
 
-  db.collection('post').insertOne({_id : 1 ,아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error, result){
-    console.log('db에 저장완료!')
-  })
+  // DB에서 total collection 총 데이터 수 꺼내오기.
+  // 데이터를 전부 찾고 싶다면 find(), 하나만 찾고 싶으면 findOne()
+  // name이 totalData인 데이터를 찾아달라는 쿼리문
+  db.collection('total').findOne({name : 'dataLength'}, function(error, result){
+    console.log(result.totalData) // total collection있는 총 데이터 수
+    let totalDataLength = result.totalData;
 
-  // 새로운 데이터가 저장 됐을 때 total collection에 있는 totalData + 1
-  // .updateOne({변경 할 데이터}, {$inc : {수정값}})
-  // update operator(연산자) $set, $inc(증가) 등 여러가지 
-  // {$set : {totalData : 변경 할 값}}
-  // {$inc : {totalData : 기존값에 더해줄 값}}
-  db.collection('total').updateOne({name : 'dataLength'}, { $inc : { totalData : 1}},function(error, result){
-    if(error) {
-      return console.log(error)
-    }
+    db.collection('post').insertOne({_id : 1 ,아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error, result){
+      console.log('db에 저장완료!')
+    })
+  
+    // 새로운 데이터가 저장 됐을 때 total collection에 있는 totalData + 1
+    // .updateOne({변경 할 데이터}, {$inc : {수정값}})
+    // update operator(연산자) $set, $inc(증가) 등 여러가지 
+    // {$set : {totalData : 변경 할 값}}
+    // {$inc : {totalData : 기존값에 더해줄 값}}
+    db.collection('total').updateOne({name : 'dataLength'}, { $inc : { totalData : 1}},function(error, result){
+      if(error) {
+        return console.log(error)
+      }
+    })
   })
 })
 
