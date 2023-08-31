@@ -160,7 +160,7 @@ app.post('/add', function(requests, response){
     console.log(result.totalData) // total collection있는 총 데이터 수
     let totalDataLength = result.totalData;
 
-    db.collection('post').insertOne({_id : 1 ,아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error, result){
+    db.collection('post').insertOne({_id : totalDataLength + 1 ,아이디 : requests.body.id, 비밀번호 : requests.body.pw}, function(error, result){
       console.log('db에 저장완료!')
     })
   
