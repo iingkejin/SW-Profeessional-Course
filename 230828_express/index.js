@@ -158,6 +158,10 @@ app.post('/add', function(requests, response){
   })
 
   // 새로운 데이터가 저장 됐을 때 total collection에 있는 totalData + 1
+  // .updateOne({변경 할 데이터}, {$inc : {수정값}})
+  // update operator(연산자) $set, $inc(증가) 등 여러가지 
+  // {$set : {totalData : 변경 할 값}}
+  // {$inc : {totalData : 기존값에 더해줄 값}}
   db.collection('total').updateOne({name : 'dataLength'}, { $inc : { totalData : 1}},function(error, result){
     if(error) {
       return console.log(error)
