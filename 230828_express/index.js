@@ -202,7 +202,7 @@ app.delete('/delete', function(requests, response){
   console.log(requests.body._id)
   requests.body._id = parseInt(requests.body._id)
   
-  db.collection('post').deleteOne({}, function(error, reulst){
+  db.collection('post').deleteOne({_id : requests.body._id}, function(error, reulst){
     if(error) {
       console.log(error)
     }

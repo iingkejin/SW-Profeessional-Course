@@ -28,7 +28,8 @@
     $('.delete').on('click', function(e){
       // 삭제 버튼이 클릭된 해당 요소의 데이터가 삭제
       let dataNum = e.target.dataset.id;
-      console.log(dataNum)
+      let curClick = $(this);
+      console.log(curClick)
 
       $.ajax({
         // method, url, data
@@ -41,6 +42,7 @@
         // Ajax 요청이 성공 했을 때 실행할 코드(콜백함수)
       }).done(function(result){
         console.log('요청 성공!')
+        curClick.parent('.box-item').fadeOut();
       })
 
     })
