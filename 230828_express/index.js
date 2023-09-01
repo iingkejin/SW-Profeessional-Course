@@ -208,4 +208,10 @@ app.delete('/delete', function(requests, response){
     }
     console.log('삭제완료!!')
   })
+
+  // 서버에서 응답코드로 요청의 상태를 표시할 수 있다.
+  // 2xx => 요청 성공
+  // 4xx => 고객 문제로 요청 실패
+  // 5xx => 서버 문제로 요청 실패
+  response.status(200).send({message : '성공적'})
 })
