@@ -9,9 +9,13 @@
 <body>
   <h1>DB에서 받아온 데이터</h1>
   <% for(let i = 0; i < log.length; i++) { %>
-    <div class="info-box">
-      <h3>ID : <%= log[i].아이디 %></h3>
-      <h3>PW : <%= log[i].비밀번호 %></h3>
+    <div class="box-item">
+      <div class="info-box">
+        <p><%= log[i]._id %></p>
+        <h3>ID : <%= log[i].아이디 %></h3>
+        <h3>PW : <%= log[i].비밀번호 %></h3>
+      </div>
+      <button type="button" class="delete">삭제</button>
     </div>
   <% } %>
 </body>
