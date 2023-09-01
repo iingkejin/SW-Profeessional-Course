@@ -30,7 +30,19 @@
       let dataNum = e.target.dataset.id;
       console.log(dataNum)
 
-      
+      $.ajax({
+        // method, url, data
+        // method : 서버에 새로고침 없이 delete로 요청
+        // url : '요청 할 경로'
+        // data : 요청과 함께 보낼 데이터
+        method : 'DELETE',
+        url : '/delete',
+        data : {_id : dataNum}
+        // Ajax 요청이 성공 했을 때 실행할 코드(콜백함수)
+      }).done(function(result){
+        console.log('요청 성공!')
+      })
+
     })
   </script>
 </body>

@@ -199,5 +199,13 @@ app.get('/add', function(requests, response){
 
 
 app.delete('/delete', function(requests, response){
-  console.log(requests.body)
+  console.log(requests.body._id)
+  requests.body._id = parseInt(requests.body._id)
+  
+  db.collection('post').deleteOne({}, function(error, reulst){
+    if(error) {
+      console.log(error)
+    }
+    console.log('삭제완료!!')
+  })
 })
