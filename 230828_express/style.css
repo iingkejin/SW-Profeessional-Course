@@ -4,10 +4,25 @@
   box-sizing: border-box;
 }
 
-.info-box {
+body {
+  padding: 40px;
+}
+
+.box-item {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 10px;
   padding: 10px 20px;
+}
+
+.info-box {
+  display: flex;
+}
+
+.info-box p {
+  margin-right: 20px;
+  font-weight: 700;
 }
