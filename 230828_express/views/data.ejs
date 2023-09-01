@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../style.css">
+  <!-- jQuey CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
   <h1>DB에서 받아온 데이터</h1>
@@ -15,8 +17,21 @@
         <h3>ID : <%= log[i].아이디 %></h3>
         <h3>PW : <%= log[i].비밀번호 %></h3>
       </div>
-      <button type="button" class="delete">삭제</button>
+      <button type="button" class="delete" data-id="<%= log[i]._id %>">삭제</button>
     </div>
   <% } %>
+
+  <script>
+    // Ajax로 삭제 요청하기(Delete)
+    // Ajax : 서버랑 통신할 수 있게 도와주는 JS문법
+    // Ajax 장점 : 새로고침 없이 서버에 요청 할 수 있다.
+    $('.delete').on('click', function(e){
+      // 삭제 버튼이 클릭된 해당 요소의 데이터가 삭제
+      let dataNum = e.target.dataset.id;
+      console.log(dataNum)
+
+      
+    })
+  </script>
 </body>
 </html>

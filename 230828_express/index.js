@@ -195,7 +195,9 @@ app.get('/add', function(requests, response){
     console.log(result)
     response.render('data.ejs', {log : result})
   })
-
-
 })
 
+
+app.delete('/delete', function(requests, response){
+  console.log(requests.body)
+})
