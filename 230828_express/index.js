@@ -215,3 +215,22 @@ app.delete('/delete', function(requests, response){
   // 5xx => 서버 문제로 요청 실패
   response.status(200).send({message : '성공적'})
 })
+
+
+// url에 데이터가 가지고 있는 _id 값을 파라미터로 받는다.
+// 각 페이지에 보여줄 내용이 다르기 때문에 
+// 내용에 따라서 경로 변경 (_id 값 사용)
+// /info/1  /info/2
+// url 파라미터 == 함수 파라미터
+// '/info/:id' : 콜론 뒤에 아무 문자나 입력 했을 때
+app.get('/info/:id', function(requests, response){
+  // params.id : url 파라미터 중 id값
+  // 'post' collection에서 params.id 값에 해당하는 데이터 찾아오기
+  // 데이터 찾을 때 requests.params.id String -> Int로 형변환
+  // 'post' collection에 _id 값이 int기 때문!
+  // console.log(typeof(requests.params.id))
+  db.collection('post').findOne({_id : parseInt(requests.params.id)}, function(error, result){
+    console.log(result)
+    response.render('info.ejs', {data : result})
+  })
+})
