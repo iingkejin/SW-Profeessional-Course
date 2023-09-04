@@ -4,8 +4,19 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   padding: 40px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #fff;
 }
 
 .box-item {
@@ -25,4 +36,12 @@ body {
 .info-box p {
   margin-right: 20px;
   font-weight: 700;
+}
+
+.edit {
+  background-color: dodgerblue;
+}
+
+.delete {
+  background-color: rgb(204, 1, 1);
 }
