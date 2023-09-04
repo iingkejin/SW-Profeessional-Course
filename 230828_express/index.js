@@ -243,7 +243,6 @@ app.get('/info/:id', function(requests, response){
 app.get('/edit/:id', function(requests, response){
   db.collection('post').findOne({_id : parseInt(requests.params.id)}, function(error, result){
     console.log(result)
-    
+    response.render('edit.ejs', {data : result})
   })
-  response.render('edit.ejs')
 })
