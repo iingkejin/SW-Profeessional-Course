@@ -20,6 +20,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 const MongoClient = require('mongodb').MongoClient;
 
 // ejs 설치 (html에서 바로 데이터 바인딩 가능) <%= 데이터 %>
+// ejs 파일은 반드시 views라는 폴더 안에 있어야 한다.
 app.set('view engine', 'ejs');
 
 // HTML form 태그에서는 GET, POST요청만 가능함!
@@ -274,6 +275,7 @@ app.put('/edit', function(requests, response){
 
 // 서버한테 정보를 보내주는 코드
 // 서버에 보낸 정보를 영구 저장 하려면 DB(Data Base)에 저장
+
 
 // url 이름짓기
 // 1. URL 명사로 작성 추천 '/명사'
