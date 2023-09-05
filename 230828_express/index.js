@@ -2,7 +2,7 @@
 
 // 설치한 라이브러리 
 // 1. express(설치방법 => 244번 코드 확인)
-// 2. nodemon => npminstall -g nodemon
+// 2. nodemon => npm install -g nodemon
 // 3. body-perser => npm install body-parser
 // 4. MongoDB => npm install mongodb@3.6.4
 // 5. ejs => npm install ejs
@@ -19,11 +19,11 @@ app.use(bodyParser.urlencoded({extended : true}));
 // MongoDB
 const MongoClient = require('mongodb').MongoClient;
 
-// ejs 설치 (html에서 바로 데이터 바인딩 가능) <%= 데이터 %>
-// ejs 파일은 반드시 views라는 폴더 안에 있어야 한다.
+// ejs (html에서 바로 데이터 바인딩 가능) <%= 데이터 %>
+// ejs 파일은 반드시 views라는 폴더 안에 위치해야 한다.
 app.set('view engine', 'ejs');
 
-// HTML form 태그에서는 GET, POST요청만 가능함!
+// HTML <form> 태그에서는 GET, POST요청만 가능!
 // PUT, DELETE 요청을 하고 싶다면 외부 라이브러리 설치 
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
@@ -58,7 +58,7 @@ app.get('/', function(requests, response){
   response.sendFile(__dirname + '/index.html');
 })
 
-// 'localhost:7000/test'로 접속시 실행 할 코드
+// 'localhost:7000/test'로 접속시 send()안 내용을 보여준다.
 app.get('/test', function(requests, response){
   response.send('Test 페이지 입니다.')
 })
@@ -236,7 +236,7 @@ app.put('/edit', function(requests, response){
 // Node.js 장단점
 // 장점 : 가벼운 요청부터 먼저 처리
 // 단점 : 이미지, 동영상, 연산 처리가 필요한 서비스를 개발해야 될 경우 속도가 떨어지고, 라이브러리도 부족하다. 
-// 이에 최적화된 언어 = python(빅데이터, 데이터 시각화 등)
+// 이에 최적화된 언어 = python(빅데이터 분석, 데이터 시각화 등)
 
 
 // 1. Node.js express 서버 구축하는 방법
@@ -265,7 +265,7 @@ app.put('/edit', function(requests, response){
 // 서버 실행
 // nodemon index.js
 
-// powershell 보안 에러
+// *** powershell 보안 에러
 // 에러 원인 : Restricted일 때 허가된 script외에 막아버리기 때문에 에러가 발생한다.
 
 // 검색 -> powershell(관리자 권한으로 실행)
@@ -287,8 +287,9 @@ app.put('/edit', function(requests, response){
 
 
 // 서버에 GET, POST, PUT, DELETE 요청하는 방법
-// DB CRUD (Create(생성), Read(읽기), Update(수정), Delete(삭제))
+// CRUD (Create(생성), Read(읽기), Update(수정), Delete(삭제))
 // insert, find, update, delete 
 // insertOne, findOne, updateOne, deleteOne
+
 
 
