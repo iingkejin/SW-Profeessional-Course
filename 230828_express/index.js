@@ -257,5 +257,8 @@ app.put('/edit', function(requests, response){
 
   db.collection('post').updateOne({_id : parseInt(requests.body._id)}, {$set : {아이디 : requests.body.id, 비밀번호 : requests.body.pw}}, function(error, result){
     console.log('수정 완료!')
+    // 해당 요청이 완료되면 /add라는 경로로 리디렉션
+    // /add. 라는 url 경로로 다시 이동 
+    response.redirect('/add')
   })
 })
