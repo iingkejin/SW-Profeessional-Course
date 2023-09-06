@@ -296,3 +296,6 @@ app.put('/edit', function(requests, response){
 // 1. views 폴더 안 join.ejs 파일 생성 
 // 2. 회원가입 폼 작성 
 // 3. db.collection('login')에 join.ejs 파일에 있는 input value값 저장 
+app.get('/join', function(requests, response){
+  response.render('join.ejs')
+})
