@@ -392,8 +392,15 @@ passport.use(new LocalStrategy({
 
 
 // 로그인 성공 -> 세션정보 만들고,
-// 씨리얼라이즈유저 : 유저 정보를 암호화 
+// 씨리얼라이즈유저(serializeUser) : 유저 정보를 암호화 
 passport.serializeUser(function(user, done){
   done(null, user.id)
 })
 
+
+// 해당 세션 데이터를 login collection에서 찾는다
+passport.deserializeUser(function(id, done){
+  db.collection('login').findOne({id : id}, function(error, result){
+    done(null, result)
+  })
+})
