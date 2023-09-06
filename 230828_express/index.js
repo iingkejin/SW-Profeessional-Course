@@ -64,9 +64,9 @@ app.get('/test', function(requests, response){
 })
 
 // localhost:7000/login 으로 접속시 보여줄 화면 => login.html
-app.get('/login', function(requests, response){
-  response.sendFile(__dirname + '/login.html')
-})
+// app.get('/login', function(requests, response){
+//   response.sendFile(__dirname + '/login.html')
+// })
 
 // localhost:7000/map 으로 접속시 보여줄 화면 => map.html
 // map.html : 카카오 지도 OPEN API
@@ -298,4 +298,15 @@ app.put('/edit', function(requests, response){
 // 3. db.collection('login')에 join.ejs 파일에 있는 input value값 저장 
 app.get('/join', function(requests, response){
   response.render('join.ejs')
+})
+
+app.post('/join', function(requests, response){
+  db.collection('total').findOne({ name : 'dataLength'}, function(error, result){
+    console.log(result.totalData)
+    let totalDataLength = result.totalData;
+
+    db.collection('login').insertOne({_id : totalDataLength + 1, name: requests.body.name, id : requests.body.id, pw : requests.body.pw }, function(error, result){
+      console.log('login collection에 저장완료!')
+    })
+  })
 })
