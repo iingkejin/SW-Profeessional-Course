@@ -344,3 +344,34 @@ app.use(passport.session());
 app.get('/login', function(requests, response){
   response.render('login.ejs')
 })
+
+// 유저가 로그인 페이지에서 로그인 했을 때
+// 데이터를 비교해서 일치하면 응답
+// 중간에 응답하기 전에 일치하지 않는다면
+// /fail 이라는 경로로 이동
+app.post('/login', passport.authenticate('local', {
+  failureRedirect : '/fail'
+}), function(requests, response){
+  response.redirect('/')
+})
+
+// 로그인 실패 했을 때 /fail 경로에서 보여줄 화면
+app.get('/fail', function(requests, response){
+  response.send('로그인 실패~!') 
+})
+
+// 로컬스트레트지(LocalStrategy)로 아이디, 비밀번호 값 일치 여부
+passport.use(new LocalStrategy({
+  // 유저가 입력한 아이디, 비밀번호에 필드 이름 설정
+  usernameField : 'id',
+  passwordField : 'pw',
+  // 사용자의 로그인 세션 유지 여부
+  session : true,
+  // 아이디, 비밀번호 외에 다른 정보를 추가로 검증하고 싶을 때
+  // req 매개변수 값을 콜백함수로 전달
+  passReqToCallback : false,
+
+  // 콜백함수에서 유저 아이디 / 비밀번호 검증
+}, function(userID, userPW, done){
+  
+}))
