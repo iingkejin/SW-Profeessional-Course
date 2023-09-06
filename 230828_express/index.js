@@ -404,3 +404,25 @@ passport.deserializeUser(function(id, done){
     done(null, result)
   })
 })
+
+
+// 로그인 한 사람만 접속할 수 있는 경로 /mypage
+app.get('/mypage', getLogin ,function(requests, response){
+  console.log(requests.user)
+  response.render('mypage.ejs', {info : requests.user})
+})
+
+// 로그인 여부를 판단하는 미들웨어
+function getLogin(requests, response, next){
+  if(requests.user) {
+    next()
+  } else {
+    response.send('로그인 하세요!')
+  }
+}
+
+app.post('/logout', function(requests, response){
+  requests.session.destroy();
+  console.log('로그아웃!')
+  response.redirect('/login')
+})
