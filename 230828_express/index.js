@@ -373,5 +373,19 @@ passport.use(new LocalStrategy({
 
   // 콜백함수에서 유저 아이디 / 비밀번호 검증
 }, function(userID, userPW, done){
-  
+  db.collection('login').findOne({id : userID}, function(error, result){
+    // result가 없을 경우 
+    // 유저가 입력한 userID값과 db에 일치하는 값이 없다
+    // done() => 파라미터 3개 받는다
+    // done(서버에러, db데이터, 에러메세지)
+    if(!result) {
+      return done(null, false, {message : '없는 아이디임'})
+    }
+
+    if(userPW == result.pw) {
+      return done(null, result)
+    } else {
+      return done(null, false, {message : '비밀번호 불일치'})
+    }
+  })
 }))
