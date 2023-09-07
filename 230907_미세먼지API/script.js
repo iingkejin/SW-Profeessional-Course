@@ -10,10 +10,30 @@ queryParams += '&' + encodeURIComponent('searchCondition') + '=' + encodeURIComp
 xhr.open('GET', url + queryParams);
 
 xhr.onreadystatechange = function () {
-  if (this.readyState == 4) { 
-    if(this.status === 200) {
+  if (this.readyState == 4) { // 서버 응답 완료 상태 확인
+    if(this.status === 200) { // HTTP 상태 코드가 200(성공)
+      // 서버로 부터 받은 JSON 형식의 문자열 데이터를 Javascript 객체로 변환
+      // responseText : 객체가 서버로부터 응답 받은 문자열이 담긴 변수
       let responsData = JSON.parse(this.responseText);
-      console.log(responsData.response.body.items)
+      // console.log(responsData.response.body.items)
+
+      // responsData에서 원하는 데이터만 추출해서 html 표기
+      if(responsData.response.body.items) {
+        let items = responsData.response.body.items;
+        console.log(items)
+
+        let dataDisplay = document.getElementById('data');
+        for(let i = 0; i < items.length; i++) {
+          let item = items[i];
+
+          let dataItem = document.createElement('div');
+          dataItem.innerHTML = item.cityName + '미세먼지 : ' + item.pm10Value;
+          dataDisplay.appendChild(dataItem);
+        }
+
+      }
+    } else {
+      console.log('HTTP 요청 실패' + this.status)
     }
   }
 };
