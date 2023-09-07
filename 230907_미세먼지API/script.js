@@ -1,5 +1,5 @@
 var xhr = new XMLHttpRequest();
-var url = 'http://apis.data.go.kr/B552584/ArpltnStatsSvc/getCtprvnMesureLIst'; /*URL*/
+var url = 'http://apis.data.go.kr/B552584/ArpltnStatsSvc/getCtprvnMesureSidoLIst'; /*URL*/
 var queryParams = '?' + encodeURIComponent('serviceKey') + '='+'rOGI%2BIvn6bqhwghISJpom2Dz1zr0tbNdR%2Blm8fl5xrLwUFt9EGQHinJBCAQhO4c3yub9o5bhWPy9AxyTKTen%2BQ%3D%3D'; /*Service Key*/
 queryParams += '&' + encodeURIComponent('returnType') + '=' + encodeURIComponent('json'); /* 응답 데이터 타입 설정 */
 queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /* 한 페이지 결과 수 */
@@ -13,7 +13,7 @@ xhr.onreadystatechange = function () {
   if (this.readyState == 4) { 
     if(this.status === 200) {
       let responsData = JSON.parse(this.responseText);
-      console.log(responsData)
+      console.log(responsData.response.body.items)
     }
   }
 };
