@@ -26,9 +26,11 @@ xhr.onreadystatechange = function () {
         for(let i = 0; i < items.length; i++) {
           let item = items[i];
 
-          let dataItem = document.createElement('div');
-          dataItem.innerHTML = item.cityName + '미세먼지 : ' + item.pm10Value;
-          dataDisplay.appendChild(dataItem);
+          if(item.cityName == '경주시') {
+            let dataItem = document.createElement('div');
+            dataItem.innerHTML = item.cityName + '미세먼지 : ' + item.pm10Value;
+            dataDisplay.appendChild(dataItem);
+          }
         }
 
       }
