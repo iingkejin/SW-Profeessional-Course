@@ -32,7 +32,8 @@ xhr.onreadystatechange = function () {
             dataDisplay.appendChild(dataItem);
           }
         }
-
+      } else {
+        console.log('데이터 구조 다시 확인바람')
       }
     } else {
       console.log('HTTP 요청 실패' + this.status)
