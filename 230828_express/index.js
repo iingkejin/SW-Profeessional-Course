@@ -100,8 +100,8 @@ MongoClient.connect('mongodb+srv://admin:wmfdlekt12@data.pvgodwt.mongodb.net/?re
   }
 
   db = client.db('data');
-  app.listen('7070', function(){
-    console.log('7070번 port!')
+  app.listen('8080', function(){
+    console.log('8080번 port!')
   })
 })
 
