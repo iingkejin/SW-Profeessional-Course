@@ -24,7 +24,8 @@ const State = () => {
   let changeBg = () => {
     // 삼항연산자로 현재 배경색이 white라면
     // 다른색으로 바꿔주고, 아니라면 white로 바꿔라
-    
+    let newBg = bg == 'white' ? 'green' : 'white';
+    setBg(newBg);
   }
 
   // count : 해당 상태값을 의미하는 변수
@@ -32,7 +33,8 @@ const State = () => {
   // 이 함수를 호출할 때 변경된 값을 인수로 전달한다.
   // (0) : 초기 상태 값 / 컴포넌트가 처음 랜더링 될 때 사용되는 값
   return (
-    <div>
+    <div style={{backgroundColor : bg}}>
+      <button onClick={changeBg}>배경색 변경</button>
       <h1>{count}</h1>
       <button onClick={() => setCount(count + 1)}>Click</button>
 
