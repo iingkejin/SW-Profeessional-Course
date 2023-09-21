@@ -1,12 +1,14 @@
 import './App.css';
-import User from './component/User';
-import State from './component/State';
+// import User from './component/User';
+// import State from './component/State';
+import Map from './component/Map';
 
 function App() {
   return (
     <div className="App">
-      <User/>
-      <State/>
+      {/* <User/>
+      <State/> */}
+      <Map/>
     </div>
   );
 }
