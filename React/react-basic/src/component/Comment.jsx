@@ -21,7 +21,7 @@ let styles = {
   }
 }
 
-const Comment = () => {
+const Comment = (props) => {
   return (
     <div style={styles.wrapper}>
       <div>
@@ -29,8 +29,8 @@ const Comment = () => {
       </div>
 
       <div style={styles.contentBox}>
-        <h3>User name</h3>
-        <p>Content</p>
+        <h3>{props.name}</h3>
+        <p>{props.text}</p>
       </div>
       <button type='button'>X</button>
     </div>
