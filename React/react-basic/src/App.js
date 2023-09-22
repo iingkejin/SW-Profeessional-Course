@@ -1,12 +1,12 @@
 import './App.css';
-import Nav from './component/Header/Nav';
-import Back from './component/Main/Back';
+import CommetList from './component/CommetList';
+import List from './component/example/List';
 
 function App() {
   return (
     <div className="App">
-      <Nav/>
-      <Back/>
+      {/* <List/> */}
+      <CommetList/>
     </div>
   );
 }
