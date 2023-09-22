@@ -21,6 +21,8 @@ let styles = {
   }
 }
 
+// 부모 컴포넌트로 부터 받아온 값 바인딩 props
+// props.부모가넘겨준이름
 const Comment = (props) => {
   return (
     <div style={styles.wrapper}>
