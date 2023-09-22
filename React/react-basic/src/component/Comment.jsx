@@ -34,7 +34,7 @@ const Comment = (props) => {
         <h3>{props.name}</h3>
         <p>{props.text}</p>
       </div>
-      <button type='button'>X</button>
+      <button onClick={props.delete} type='button'>X</button>
     </div>
   );
 };
