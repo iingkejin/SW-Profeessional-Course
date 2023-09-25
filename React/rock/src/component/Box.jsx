@@ -3,7 +3,7 @@ import './Box.css'
 
 const Box = (props) => {
   return (
-    <div>
+    <div className='box-item'>
       <h1>{props.title}</h1>
       <h2>Rock</h2>
       <img src="https://nationaltoday.com/wp-content/uploads/2021/08/National-Pet-Rock-Day.jpg" alt="바위 이미지" />
