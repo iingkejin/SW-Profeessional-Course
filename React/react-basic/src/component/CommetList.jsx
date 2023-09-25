@@ -53,7 +53,7 @@ const CommnetList = () => {
       {
         list.map((item, i) => {
           return (
-            // 자식 Comment component에 name,text이름으로 값 전달
+            // 자식 Comment component에 name,text 이름으로 값 전달
             <Comment name={item.name} text={item.content} key={i} delete={() => deleteCommnet(i)}/>
           )
         })
