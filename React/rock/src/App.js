@@ -65,8 +65,8 @@ function App() {
   return (
     <div className="App">
       <div className='box-list'>
-        <Box title="You"/>
-        <Box title="Computer"/>
+        <Box title="You" select={userSelect} result={result}/>
+        <Box title="Computer" select={comSelect} result={result}/>
       </div>
 
       <div className="btn-list">
